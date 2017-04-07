@@ -1,0 +1,7046 @@
+{
+  "Settings": {
+    "set_Localization": "True",
+    "set_TextFormatter": "Unity",
+    "set_UseScriptSupport": "True",
+    "ObjectDefinitionsHash": "1C6AD4A4B8B1CB274F6DD5D443A4E475B1B7EDBDE9977437A2FCC25E93D0323F"
+  },
+  "Project": {
+    "Name": "Project Theseus",
+    "DetailName": "",
+    "Guid": "6e76f652-26e7-4e37-a606-62280680ae25",
+    "TechnicalName": "ProjectTheseus"
+  },
+  "GlobalVariables": [],
+  "ObjectDefinitions": [
+    {
+      "Type": "Point",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "x",
+          "Type": "float"
+        },
+        {
+          "Property": "y",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Color",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "a",
+          "Type": "float"
+        },
+        {
+          "Property": "r",
+          "Type": "float"
+        },
+        {
+          "Property": "g",
+          "Type": "float"
+        },
+        {
+          "Property": "b",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Size",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "w",
+          "Type": "float"
+        },
+        {
+          "Property": "h",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Rect",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "x",
+          "Type": "float"
+        },
+        {
+          "Property": "y",
+          "Type": "float"
+        },
+        {
+          "Property": "w",
+          "Type": "float"
+        },
+        {
+          "Property": "h",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "PreviewImage",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "ViewBox",
+          "Type": "Rect"
+        },
+        {
+          "Property": "Mode",
+          "Type": "PreviewImageViewBoxModes"
+        },
+        {
+          "Property": "Asset",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Transformation",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Pivot",
+          "Type": "Point"
+        },
+        {
+          "Property": "Rotation",
+          "Type": "float"
+        },
+        {
+          "Property": "Translation",
+          "Type": "Point"
+        }
+      ]
+    },
+    {
+      "Type": "OutgoingConnection",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Label",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "TargetPin",
+          "Type": "InputPin"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "IncomingConnection",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Label",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "SourcePin",
+          "Type": "OutputPin"
+        },
+        {
+          "Property": "Source",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "OutputPin",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Text",
+          "Type": "Script_Instruction"
+        },
+        {
+          "Property": "Id",
+          "Type": "id"
+        },
+        {
+          "Property": "Owner",
+          "Type": "id"
+        },
+        {
+          "Property": "Connections",
+          "Type": "Array",
+          "ItemType": "OutgoingConnection"
+        }
+      ]
+    },
+    {
+      "Type": "InputPin",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Text",
+          "Type": "Script_Condition"
+        },
+        {
+          "Property": "Id",
+          "Type": "id"
+        },
+        {
+          "Property": "Owner",
+          "Type": "id"
+        },
+        {
+          "Property": "Connections",
+          "Type": "Array",
+          "ItemType": "OutgoingConnection"
+        }
+      ]
+    },
+    {
+      "Type": "LocationAnchor",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "AnchorPositionX",
+          "Type": "float"
+        },
+        {
+          "Property": "AnchorPositionY",
+          "Type": "float"
+        },
+        {
+          "Property": "AnchorColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "AnchorSize",
+          "Type": "LocationAnchorSize"
+        }
+      ]
+    },
+    {
+      "Type": "Sex",
+      "Class": "Enum",
+      "Values": {
+        "Male": 0,
+        "Female": 1,
+        "Unknown": 2
+      }
+    },
+    {
+      "Type": "ShapeType",
+      "Class": "Enum",
+      "Values": {
+        "Invalid": 0,
+        "Spot": 1,
+        "Circle": 2,
+        "Rectangle": 3,
+        "Path": 4,
+        "Polygon": 5,
+        "Link": 6
+      }
+    },
+    {
+      "Type": "SelectabilityModes",
+      "Class": "Enum",
+      "Values": {
+        "Unselectable": 0,
+        "Selectable": 1
+      }
+    },
+    {
+      "Type": "OutlineStyle",
+      "Class": "Enum",
+      "Values": {
+        "Solid": 0,
+        "Dot": 1,
+        "Dash": 2,
+        "DashDot": 3,
+        "DashDotDot": 4
+      }
+    },
+    {
+      "Type": "VisibilityModes",
+      "Class": "Enum",
+      "Values": {
+        "Invisible": 0,
+        "Visible": 1
+      }
+    },
+    {
+      "Type": "OutlineStyle",
+      "Class": "Enum",
+      "Values": {
+        "Solid": 0,
+        "Dot": 1,
+        "Dash": 2,
+        "DashDot": 3,
+        "DashDotDot": 4
+      }
+    },
+    {
+      "Type": "PathCaps",
+      "Class": "Enum",
+      "Values": {
+        "ColoredDot": 0,
+        "None": 1,
+        "LineArrowHead": 2,
+        "FilledArrowHead": 3,
+        "Diamond": 4,
+        "Square": 5,
+        "Disc": 6
+      }
+    },
+    {
+      "Type": "LocationAnchorSize",
+      "Class": "Enum",
+      "Values": {
+        "Small": 0,
+        "Medium": 1,
+        "Large": 2
+      }
+    },
+    {
+      "Type": "PreviewImageViewBoxModes",
+      "Class": "Enum",
+      "Values": {
+        "FromAsset": 0,
+        "Custom": 1
+      }
+    },
+    {
+      "Type": "FlowFragment",
+      "Class": "FlowFragment",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Dialogue",
+      "Class": "Dialogue",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "DialogueFragment",
+      "Class": "DialogueFragment",
+      "Properties": [
+        {
+          "Property": "MenuText",
+          "Type": "string"
+        },
+        {
+          "Property": "StageDirections",
+          "Type": "string"
+        },
+        {
+          "Property": "Speaker",
+          "Type": "Id"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Hub",
+      "Class": "Hub",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Comment",
+      "Class": "Comment",
+      "Properties": [
+        {
+          "Property": "CreatedBy",
+          "Type": "string"
+        },
+        {
+          "Property": "CreatedOn",
+          "Type": "DateTime"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Jump",
+      "Class": "Jump",
+      "Properties": [
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        },
+        {
+          "Property": "TargetPin",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Entity",
+      "Class": "Entity",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "DefaultSupportingCharacterTemplate",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "DefaultSupportingCharacterTemplate",
+        "DisplayName": "Supporting characters",
+        "Features": [
+          {
+            "TechnicalName": "DefaultBasicCharacterFeature",
+            "DisplayName": "Basic Character Properties",
+            "Properties": [
+              {
+                "Property": "Age",
+                "Type": "Float",
+                "DisplayName": "Age"
+              },
+              {
+                "Property": "Species",
+                "Type": "String",
+                "DisplayName": "Species",
+                "Localizable": true
+              },
+              {
+                "Property": "BornIn",
+                "Type": "String",
+                "DisplayName": "Born in",
+                "Localizable": true
+              },
+              {
+                "Property": "Sex",
+                "Type": "Sex",
+                "DisplayName": "Sex",
+                "Localizable": true
+              },
+              {
+                "Property": "Occupation",
+                "Type": "String",
+                "DisplayName": "Profession",
+                "Localizable": true
+              },
+              {
+                "Property": "Accent",
+                "Type": "String",
+                "DisplayName": "Voice",
+                "Localizable": true
+              },
+              {
+                "Property": "Personality",
+                "Type": "String",
+                "DisplayName": "Personality",
+                "Localizable": true
+              },
+              {
+                "Property": "Appearance",
+                "Type": "String",
+                "DisplayName": "Appearance",
+                "Localizable": true
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Age",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "Species",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Enum",
+                "IsLocalized": "True",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Accent",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Personality",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "DefaultMainCharacterTemplate",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "DefaultMainCharacterTemplate",
+        "DisplayName": "Main characters",
+        "Features": [
+          {
+            "TechnicalName": "DefaultExtendedCharacterFeature",
+            "DisplayName": "Extended Character Properties",
+            "Properties": [
+              {
+                "Property": "Motivation",
+                "Type": "String",
+                "DisplayName": "Goals",
+                "Localizable": true
+              },
+              {
+                "Property": "InnerConflict",
+                "Type": "String",
+                "DisplayName": "Inner Conflict",
+                "Localizable": true
+              },
+              {
+                "Property": "Skills",
+                "Type": "String",
+                "DisplayName": "Skills",
+                "Localizable": true
+              },
+              {
+                "Property": "Fears",
+                "Type": "String",
+                "DisplayName": "Weaknesses",
+                "Localizable": true
+              },
+              {
+                "Property": "Habits",
+                "Type": "String",
+                "DisplayName": "Quirks / Habits",
+                "Localizable": true
+              },
+              {
+                "Property": "FurtherDetails",
+                "Type": "String",
+                "DisplayName": "Further Details",
+                "Localizable": true
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Motivation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "InnerConflict",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Skills",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Fears",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Habits",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "FurtherDetails",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          },
+          {
+            "TechnicalName": "DefaultBasicCharacterFeature",
+            "DisplayName": "Basic Character Properties",
+            "Properties": [
+              {
+                "Property": "Age",
+                "Type": "Float",
+                "DisplayName": "Age"
+              },
+              {
+                "Property": "Species",
+                "Type": "String",
+                "DisplayName": "Species",
+                "Localizable": true
+              },
+              {
+                "Property": "BornIn",
+                "Type": "String",
+                "DisplayName": "Born in",
+                "Localizable": true
+              },
+              {
+                "Property": "Sex",
+                "Type": "Sex",
+                "DisplayName": "Sex",
+                "Localizable": true
+              },
+              {
+                "Property": "Occupation",
+                "Type": "String",
+                "DisplayName": "Profession",
+                "Localizable": true
+              },
+              {
+                "Property": "Accent",
+                "Type": "String",
+                "DisplayName": "Voice",
+                "Localizable": true
+              },
+              {
+                "Property": "Personality",
+                "Type": "String",
+                "DisplayName": "Personality",
+                "Localizable": true
+              },
+              {
+                "Property": "Appearance",
+                "Type": "String",
+                "DisplayName": "Appearance",
+                "Localizable": true
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Age",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "Species",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Enum",
+                "IsLocalized": "True",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Accent",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Personality",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Location",
+      "Class": "Location",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Spot",
+      "Class": "Spot",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Zone",
+      "Class": "Zone",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Path",
+      "Class": "Path",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "StartCap",
+          "Type": "PathCaps"
+        },
+        {
+          "Property": "EndCap",
+          "Type": "PathCaps"
+        },
+        {
+          "Property": "LineWidth",
+          "Type": "Float"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Link",
+      "Class": "Link",
+      "Properties": [
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Asset",
+      "Class": "Asset",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Filename",
+          "Type": "string"
+        },
+        {
+          "Property": "OriginalSource",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Condition",
+      "Class": "Condition",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Expression",
+          "Type": "Script_Condition"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Instruction",
+      "Class": "Instruction",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Expression",
+          "Type": "Script_Instruction"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "LocationText",
+      "Class": "LocationText",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Anchors",
+          "Type": "Array",
+          "ItemType": "LocationAnchor"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "ForcedWidth",
+          "Type": "Float"
+        },
+        {
+          "Property": "ForcedHeight",
+          "Type": "Float"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "LocationImage",
+      "Class": "LocationImage",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Anchors",
+          "Type": "Array",
+          "ItemType": "LocationAnchor"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "ClipRect",
+          "Type": "Rect"
+        },
+        {
+          "Property": "ImageOpacity",
+          "Type": "Float"
+        },
+        {
+          "Property": "ImageAsset",
+          "Type": "Id"
+        },
+        {
+          "Property": "CachedImageWidth",
+          "Type": "int"
+        },
+        {
+          "Property": "CachedImageHeight",
+          "Type": "int"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Document",
+      "Class": "Document",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "TextObject",
+      "Class": "TextObject",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "UserFolder",
+      "Class": "UserFolder",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "String"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        }
+      ]
+    }
+  ],
+  "Packages": [
+    {
+      "Name": "All objects",
+      "Description": "Exports all objects & types of the project",
+      "IsDefaultPackage": true,
+      "Models": [
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_C9C294A8",
+            "Id": "0x10000000000010F",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_C9C294A8.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_C9C294A8.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": -150.0,
+              "y": 200.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3384972456,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000112",
+                "Owner": "0x10000000000010F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000113",
+                "Owner": "0x10000000000010F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000119",
+                    "Target": "0x100000000000116"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000120",
+                    "Target": "0x10000000000011D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_D7819200",
+            "Id": "0x100000000000126",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_D7819200.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_D7819200.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 500.0,
+              "y": -50.0
+            },
+            "ZIndex": 5.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3615592960,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000129",
+                "Owner": "0x100000000000126"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000012A",
+                "Owner": "0x100000000000126",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000131",
+                    "Target": "0x10000000000012E"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000138",
+                    "Target": "0x100000000000135"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_1D4C131F",
+            "Id": "0x10000000000013E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_1D4C131F.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_1D4C131F.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1250.0,
+              "y": -300.0
+            },
+            "ZIndex": 11.0,
+            "Size": {
+              "w": 300.0,
+              "h": 200.0
+            },
+            "ShortId": 491524895,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000141",
+                "Owner": "0x10000000000013E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000142",
+                "Owner": "0x10000000000013E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000151",
+                    "Target": "0x10000000000014E"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000158",
+                    "Target": "0x100000000000155"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_15761205",
+            "Id": "0x100000000000146",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_15761205.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_15761205.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1250.0,
+              "y": -50.0
+            },
+            "ZIndex": 13.0,
+            "Size": {
+              "w": 300.0,
+              "h": 200.0
+            },
+            "ShortId": 360059397,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000149",
+                "Owner": "0x100000000000146"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000014A",
+                "Owner": "0x100000000000146",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000015F",
+                    "Target": "0x10000000000015C"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000166",
+                    "Target": "0x100000000000163"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_183E738A",
+            "Id": "0x10000000000016E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_183E738A.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_183E738A.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2025.0,
+              "y": -350.0
+            },
+            "ZIndex": 23.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 406745994,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000171",
+                "Owner": "0x10000000000016E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000172",
+                "Owner": "0x10000000000016E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000179",
+                    "Target": "0x100000000000176"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_FDDDD103",
+            "Id": "0x10000000000017D",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_FDDDD103.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_FDDDD103.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2025.0,
+              "y": -625.0
+            },
+            "ZIndex": 27.0,
+            "Size": {
+              "w": 300.0,
+              "h": 225.0
+            },
+            "ShortId": 4259172611,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000180",
+                "Owner": "0x10000000000017D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000181",
+                "Owner": "0x10000000000017D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000019B",
+                    "Target": "0x100000000000198"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001A2",
+                    "Target": "0x10000000000019F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_D1F51576",
+            "Id": "0x1000000000001A9",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_D1F51576.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_D1F51576.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2775.0,
+              "y": -600.0
+            },
+            "ZIndex": 33.0,
+            "Size": {
+              "w": 300.0,
+              "h": 200.0
+            },
+            "ShortId": 3522499958,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001AC",
+                "Owner": "0x1000000000001A9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001AD",
+                "Owner": "0x1000000000001A9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001BC",
+                    "Target": "0x1000000000001B9"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001C3",
+                    "Target": "0x1000000000001C0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_F3B127A7",
+            "Id": "0x1000000000001B0",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_F3B127A7.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_F3B127A7.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2750.0,
+              "y": -325.0
+            },
+            "ZIndex": 35.0,
+            "Size": {
+              "w": 325.0,
+              "h": 200.0
+            },
+            "ShortId": 4088473511,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001B3",
+                "Owner": "0x1000000000001B0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001B4",
+                "Owner": "0x1000000000001B0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001CA",
+                    "Target": "0x1000000000001C7"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001D1",
+                    "Target": "0x1000000000001CE"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_38321A29",
+            "Id": "0x1000000000001D9",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_38321A29.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_38321A29.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3625.0,
+              "y": -525.0
+            },
+            "ZIndex": 45.0,
+            "Size": {
+              "w": 325.0,
+              "h": 275.0
+            },
+            "ShortId": 942807593,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001DC",
+                "Owner": "0x1000000000001D9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001DD",
+                "Owner": "0x1000000000001D9"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_40083AB1",
+            "Id": "0x1000000000001E4",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_40083AB1.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_40083AB1.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 500.0,
+              "y": 525.0
+            },
+            "ZIndex": 50.0,
+            "Size": {
+              "w": 250.0,
+              "h": 275.0
+            },
+            "ShortId": 1074281137,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001E7",
+                "Owner": "0x1000000000001E4"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001E8",
+                "Owner": "0x1000000000001E4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001F5",
+                    "Target": "0x1000000000001F2"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000022D",
+                    "Target": "0x10000000000022A"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_072249C5",
+            "Id": "0x1000000000001FA",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_072249C5.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_072249C5.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1300.0,
+              "y": 875.0
+            },
+            "ZIndex": 54.0,
+            "Size": {
+              "w": 275.0,
+              "h": 225.0
+            },
+            "ShortId": 119687621,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001FD",
+                "Owner": "0x1000000000001FA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001FE",
+                "Owner": "0x1000000000001FA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000205",
+                    "Target": "0x100000000000202"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000020C",
+                    "Target": "0x100000000000209"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_527360B9",
+            "Id": "0x100000000000212",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_527360B9.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_527360B9.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2050.0,
+              "y": 1175.0
+            },
+            "ZIndex": 60.0,
+            "Size": {
+              "w": 325.0,
+              "h": 225.0
+            },
+            "ShortId": 1383293113,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000215",
+                "Owner": "0x100000000000212"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000216",
+                "Owner": "0x100000000000212",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000021D",
+                    "Target": "0x10000000000021A"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000224",
+                    "Target": "0x100000000000221"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_DBFE6192",
+            "Id": "0x100000000000233",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_DBFE6192.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_DBFE6192.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2925.0,
+              "y": 1125.0
+            },
+            "ZIndex": 69.0,
+            "Size": {
+              "w": 250.0,
+              "h": 125.0
+            },
+            "ShortId": 3690881426,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000236",
+                "Owner": "0x100000000000233"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000237",
+                "Owner": "0x100000000000233",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000246",
+                    "Target": "0x100000000000243"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000024D",
+                    "Target": "0x10000000000024A"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_9CBBEB18",
+            "Id": "0x10000000000023A",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_9CBBEB18.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_9CBBEB18.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2925.0,
+              "y": 1425.0
+            },
+            "ZIndex": 71.0,
+            "Size": {
+              "w": 275.0,
+              "h": 125.0
+            },
+            "ShortId": 2629561112,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000023D",
+                "Owner": "0x10000000000023A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000023E",
+                "Owner": "0x10000000000023A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000255",
+                    "Target": "0x100000000000252"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000025C",
+                    "Target": "0x100000000000259"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_97BEC46D",
+            "Id": "0x100000000000266",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_97BEC46D.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_97BEC46D.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3750.0,
+              "y": 925.0
+            },
+            "ZIndex": 81.0,
+            "Size": {
+              "w": 250.0,
+              "h": 125.0
+            },
+            "ShortId": 2545861741,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000269",
+                "Owner": "0x100000000000266"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000026A",
+                "Owner": "0x100000000000266",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000282",
+                    "Target": "0x10000000000027F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_80AEAF68",
+            "Id": "0x10000000000026D",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_80AEAF68.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_80AEAF68.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3725.0,
+              "y": 1225.0
+            },
+            "ZIndex": 83.0,
+            "Size": {
+              "w": 300.0,
+              "h": 200.0
+            },
+            "ShortId": 2158931816,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000270",
+                "Owner": "0x10000000000026D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000271",
+                "Owner": "0x10000000000026D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000028A",
+                    "Target": "0x100000000000287"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000291",
+                    "Target": "0x10000000000028E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_B5EE63BC",
+            "Id": "0x100000000000275",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_B5EE63BC.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_B5EE63BC.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3725.0,
+              "y": 1575.0
+            },
+            "ZIndex": 86.0,
+            "Size": {
+              "w": 300.0,
+              "h": 175.0
+            },
+            "ShortId": 3052299196,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000278",
+                "Owner": "0x100000000000275"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000279",
+                "Owner": "0x100000000000275",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000298",
+                    "Target": "0x100000000000295"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000029F",
+                    "Target": "0x10000000000029C"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_42AF0758",
+            "Id": "0x1000000000002A7",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_42AF0758.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_42AF0758.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4675.0,
+              "y": 1050.0
+            },
+            "ZIndex": 98.0,
+            "Size": {
+              "w": 250.0,
+              "h": 200.0
+            },
+            "ShortId": 1118766936,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002AA",
+                "Owner": "0x1000000000002A7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002AB",
+                "Owner": "0x1000000000002A7"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_99D4D21D",
+            "Id": "0x1000000000002B4",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_99D4D21D.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_99D4D21D.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2775.0,
+              "y": -50.0
+            },
+            "ZIndex": 105.0,
+            "Size": {
+              "w": 300.0,
+              "h": 150.0
+            },
+            "ShortId": 2580861469,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002B7",
+                "Owner": "0x1000000000002B4"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002B8",
+                "Owner": "0x1000000000002B4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001CA",
+                    "Target": "0x1000000000001C7"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001D1",
+                    "Target": "0x1000000000001CE"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_5C0A36D3",
+            "Id": "0x1000000000002BE",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_5C0A36D3.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_5C0A36D3.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2775.0,
+              "y": -850.0
+            },
+            "ZIndex": 109.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 1544173267,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002C1",
+                "Owner": "0x1000000000002BE"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002C2",
+                "Owner": "0x1000000000002BE",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001C3",
+                    "Target": "0x1000000000001C0"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001BC",
+                    "Target": "0x1000000000001B9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_14CF3288",
+            "Id": "0x1000000000002C8",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_14CF3288.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_14CF3288.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2050.0,
+              "y": 425.0
+            },
+            "ZIndex": 113.0,
+            "Size": {
+              "w": 300.0,
+              "h": 250.0
+            },
+            "ShortId": 349123208,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002CB",
+                "Owner": "0x1000000000002C8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002CC",
+                "Owner": "0x1000000000002C8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002D3",
+                    "Target": "0x1000000000002D0"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002DA",
+                    "Target": "0x1000000000002D7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_FA1A5D97",
+            "Id": "0x1000000000002E0",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_FA1A5D97.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_FA1A5D97.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3000.0,
+              "y": 200.0
+            },
+            "ZIndex": 119.0,
+            "Size": {
+              "w": 275.0,
+              "h": 250.0
+            },
+            "ShortId": 4196031895,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002E3",
+                "Owner": "0x1000000000002E0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002E4",
+                "Owner": "0x1000000000002E0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002F2",
+                    "Target": "0x1000000000002EF"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002F9",
+                    "Target": "0x1000000000002F6"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_893B9961",
+            "Id": "0x1000000000002E7",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_893B9961.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_893B9961.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2875.0,
+              "y": 550.0
+            },
+            "ZIndex": 121.0,
+            "Size": {
+              "w": 275.0,
+              "h": 250.0
+            },
+            "ShortId": 2302384481,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002EA",
+                "Owner": "0x1000000000002E7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002EB",
+                "Owner": "0x1000000000002E7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000031A",
+                    "Target": "0x100000000000317"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000321",
+                    "Target": "0x10000000000031E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_CEAA2EB8",
+            "Id": "0x1000000000002FF",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_CEAA2EB8.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_CEAA2EB8.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3775.0,
+              "y": 225.0
+            },
+            "ZIndex": 127.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3467259576,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000302",
+                "Owner": "0x1000000000002FF"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000303",
+                "Owner": "0x1000000000002FF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000331",
+                    "Target": "0x10000000000032E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_C93ED261",
+            "Id": "0x10000000000030F",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_C93ED261.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_C93ED261.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4650.0,
+              "y": 725.0
+            },
+            "ZIndex": 131.0,
+            "Size": {
+              "w": 275.0,
+              "h": 225.0
+            },
+            "ShortId": 3376337505,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000312",
+                "Owner": "0x10000000000030F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000313",
+                "Owner": "0x10000000000030F"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_727784DC",
+            "Id": "0x100000000000325",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "FFr_727784DC.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "FFr_727784DC.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3675.0,
+              "y": 600.0
+            },
+            "ZIndex": 137.0,
+            "Size": {
+              "w": 300.0,
+              "h": 225.0
+            },
+            "ShortId": 1920435420,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000328",
+                "Owner": "0x100000000000325"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000329",
+                "Owner": "0x100000000000325",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000030A",
+                    "Target": "0x100000000000307"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_3EB04445",
+            "Id": "0x100000000000116",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_3EB04445.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_3EB04445.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 192.0,
+              "y": 175.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 241.0,
+              "h": 100.0
+            },
+            "ShortId": 1051739205,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000119",
+                "Owner": "0x100000000000116"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000011A",
+                "Owner": "0x100000000000116",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000129",
+                    "Target": "0x100000000000126"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_EE0B5AAB",
+            "Id": "0x10000000000011D",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_EE0B5AAB.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_EE0B5AAB.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 192.0,
+              "y": 325.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 241.0,
+              "h": 100.0
+            },
+            "ShortId": 3993721515,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000120",
+                "Owner": "0x10000000000011D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000121",
+                "Owner": "0x10000000000011D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001E7",
+                    "Target": "0x1000000000001E4"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_14D539F1",
+            "Id": "0x10000000000012E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_14D539F1.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_14D539F1.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 842.0,
+              "y": -175.0
+            },
+            "ZIndex": 7.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 349518321,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000131",
+                "Owner": "0x10000000000012E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000132",
+                "Owner": "0x10000000000012E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000141",
+                    "Target": "0x10000000000013E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_0598DF66",
+            "Id": "0x100000000000135",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_0598DF66.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_0598DF66.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 842.0,
+              "y": 25.0
+            },
+            "ZIndex": 9.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 93904742,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000138",
+                "Owner": "0x100000000000135"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000139",
+                "Owner": "0x100000000000135",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000149",
+                    "Target": "0x100000000000146"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_E06416DD",
+            "Id": "0x10000000000014E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_E06416DD.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_E06416DD.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1667.0,
+              "y": -475.0
+            },
+            "ZIndex": 15.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 3764655837,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000151",
+                "Owner": "0x10000000000014E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000152",
+                "Owner": "0x10000000000014E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000180",
+                    "Target": "0x10000000000017D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_4F39810C",
+            "Id": "0x100000000000155",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_4F39810C.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_4F39810C.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1667.0,
+              "y": -275.0
+            },
+            "ZIndex": 17.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 1329168652,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000158",
+                "Owner": "0x100000000000155"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000159",
+                "Owner": "0x100000000000155",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000171",
+                    "Target": "0x10000000000016E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_797601A3",
+            "Id": "0x10000000000015C",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_797601A3.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_797601A3.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1617.0,
+              "y": 50.0
+            },
+            "ZIndex": 19.0,
+            "Size": {
+              "w": 291.0,
+              "h": 125.0
+            },
+            "ShortId": 2037776803,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000015F",
+                "Owner": "0x10000000000015C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000160",
+                "Owner": "0x10000000000015C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002B7",
+                    "Target": "0x1000000000002B4"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_40CCD3C8",
+            "Id": "0x100000000000163",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_40CCD3C8.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_40CCD3C8.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1642.0,
+              "y": -100.0
+            },
+            "ZIndex": 21.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 1087165384,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000166",
+                "Owner": "0x100000000000163"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000167",
+                "Owner": "0x100000000000163",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000171",
+                    "Target": "0x10000000000016E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_B12149AA",
+            "Id": "0x100000000000176",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_B12149AA.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_B12149AA.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2392.0,
+              "y": -300.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 2971748778,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000179",
+                "Owner": "0x100000000000176"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000017A",
+                "Owner": "0x100000000000176",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001B3",
+                    "Target": "0x1000000000001B0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_9C876F10",
+            "Id": "0x100000000000198",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_9C876F10.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_9C876F10.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2392.0,
+              "y": -700.0
+            },
+            "ZIndex": 29.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 2626121488,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000019B",
+                "Owner": "0x100000000000198"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000019C",
+                "Owner": "0x100000000000198",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002C1",
+                    "Target": "0x1000000000002BE"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_E7B72EDC",
+            "Id": "0x10000000000019F",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_E7B72EDC.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_E7B72EDC.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2392.0,
+              "y": -525.0
+            },
+            "ZIndex": 31.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 3887541980,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001A2",
+                "Owner": "0x10000000000019F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001A3",
+                "Owner": "0x10000000000019F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001AC",
+                    "Target": "0x1000000000001A9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_801E06D6",
+            "Id": "0x1000000000001B9",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_801E06D6.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_801E06D6.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3167.0,
+              "y": -700.0
+            },
+            "ZIndex": 37.0,
+            "Size": {
+              "w": 291.0,
+              "h": 125.0
+            },
+            "ShortId": 2149451478,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001BC",
+                "Owner": "0x1000000000001B9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001BD",
+                "Owner": "0x1000000000001B9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001DC",
+                    "Target": "0x1000000000001D9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_59D5859E",
+            "Id": "0x1000000000001C0",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_59D5859E.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_59D5859E.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3167.0,
+              "y": -525.0
+            },
+            "ZIndex": 39.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 1507165598,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001C3",
+                "Owner": "0x1000000000001C0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001C4",
+                "Owner": "0x1000000000001C0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001DC",
+                    "Target": "0x1000000000001D9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_0AB04DF9",
+            "Id": "0x1000000000001C7",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_0AB04DF9.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_0AB04DF9.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3167.0,
+              "y": -350.0
+            },
+            "ZIndex": 41.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 179326457,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001CA",
+                "Owner": "0x1000000000001C7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001CB",
+                "Owner": "0x1000000000001C7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001DC",
+                    "Target": "0x1000000000001D9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_A829F05A",
+            "Id": "0x1000000000001CE",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_A829F05A.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_A829F05A.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3167.0,
+              "y": -200.0
+            },
+            "ZIndex": 43.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 2821320794,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001D1",
+                "Owner": "0x1000000000001CE"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001D2",
+                "Owner": "0x1000000000001CE",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001DC",
+                    "Target": "0x1000000000001D9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_C41E97EF",
+            "Id": "0x1000000000001F2",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_C41E97EF.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_C41E97EF.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 867.0,
+              "y": 900.0
+            },
+            "ZIndex": 52.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 3290339311,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001F5",
+                "Owner": "0x1000000000001F2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001F6",
+                "Owner": "0x1000000000001F2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001FD",
+                    "Target": "0x1000000000001FA"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_D1C35286",
+            "Id": "0x100000000000202",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_D1C35286.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_D1C35286.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1642.0,
+              "y": 575.0
+            },
+            "ZIndex": 56.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 3519238790,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000205",
+                "Owner": "0x100000000000202"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000206",
+                "Owner": "0x100000000000202",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002CB",
+                    "Target": "0x1000000000002C8"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_A670381D",
+            "Id": "0x100000000000209",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_A670381D.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_A670381D.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 1617.0,
+              "y": 1200.0
+            },
+            "ZIndex": 58.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 2792372253,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000020C",
+                "Owner": "0x100000000000209"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000020D",
+                "Owner": "0x100000000000209",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000215",
+                    "Target": "0x100000000000212"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_BAAB7072",
+            "Id": "0x10000000000021A",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_BAAB7072.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_BAAB7072.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2517.0,
+              "y": 1175.0
+            },
+            "ZIndex": 62.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 3131797618,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000021D",
+                "Owner": "0x10000000000021A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000021E",
+                "Owner": "0x10000000000021A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000236",
+                    "Target": "0x100000000000233"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_3714787B",
+            "Id": "0x100000000000221",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_3714787B.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_3714787B.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2567.0,
+              "y": 1425.0
+            },
+            "ZIndex": 64.0,
+            "Size": {
+              "w": 241.0,
+              "h": 100.0
+            },
+            "ShortId": 924088443,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000224",
+                "Owner": "0x100000000000221"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000225",
+                "Owner": "0x100000000000221",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000023D",
+                    "Target": "0x10000000000023A"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_963B3D6A",
+            "Id": "0x10000000000022A",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_963B3D6A.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_963B3D6A.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 892.0,
+              "y": 675.0
+            },
+            "ZIndex": 66.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 2520464746,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000022D",
+                "Owner": "0x10000000000022A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000022E",
+                "Owner": "0x10000000000022A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001FD",
+                    "Target": "0x1000000000001FA"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_43B43A0D",
+            "Id": "0x100000000000243",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_43B43A0D.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_43B43A0D.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3317.0,
+              "y": 950.0
+            },
+            "ZIndex": 73.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 1135884813,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000246",
+                "Owner": "0x100000000000243"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000247",
+                "Owner": "0x100000000000243",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000269",
+                    "Target": "0x100000000000266"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_296AF01D",
+            "Id": "0x10000000000024A",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_296AF01D.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_296AF01D.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3292.0,
+              "y": 1175.0
+            },
+            "ZIndex": 75.0,
+            "Size": {
+              "w": 266.0,
+              "h": 125.0
+            },
+            "ShortId": 694874141,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000024D",
+                "Owner": "0x10000000000024A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000024E",
+                "Owner": "0x10000000000024A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000270",
+                    "Target": "0x10000000000026D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_5FCE582C",
+            "Id": "0x100000000000252",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_5FCE582C.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_5FCE582C.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3292.0,
+              "y": 1400.0
+            },
+            "ZIndex": 77.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 1607358508,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000255",
+                "Owner": "0x100000000000252"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000256",
+                "Owner": "0x100000000000252",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000270",
+                    "Target": "0x10000000000026D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_20152C0E",
+            "Id": "0x100000000000259",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_20152C0E.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_20152C0E.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3292.0,
+              "y": 1625.0
+            },
+            "ZIndex": 79.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 538258446,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000025C",
+                "Owner": "0x100000000000259"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000025D",
+                "Owner": "0x100000000000259",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000278",
+                    "Target": "0x100000000000275"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_B5899093",
+            "Id": "0x10000000000027F",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_B5899093.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_B5899093.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4142.0,
+              "y": 900.0
+            },
+            "ZIndex": 88.0,
+            "Size": {
+              "w": 241.0,
+              "h": 100.0
+            },
+            "ShortId": 3045691539,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000282",
+                "Owner": "0x10000000000027F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000283",
+                "Owner": "0x10000000000027F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002AA",
+                    "Target": "0x1000000000002A7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_1875F74C",
+            "Id": "0x100000000000287",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_1875F74C.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_1875F74C.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4142.0,
+              "y": 1125.0
+            },
+            "ZIndex": 90.0,
+            "Size": {
+              "w": 216.0,
+              "h": 100.0
+            },
+            "ShortId": 410384204,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000028A",
+                "Owner": "0x100000000000287"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000028B",
+                "Owner": "0x100000000000287",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002AA",
+                    "Target": "0x1000000000002A7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_773E673A",
+            "Id": "0x10000000000028E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_773E673A.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_773E673A.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4117.0,
+              "y": 1325.0
+            },
+            "ZIndex": 92.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 2000578362,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000291",
+                "Owner": "0x10000000000028E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000292",
+                "Owner": "0x10000000000028E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002AA",
+                    "Target": "0x1000000000002A7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_C6C247B0",
+            "Id": "0x100000000000295",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_C6C247B0.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_C6C247B0.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4117.0,
+              "y": 1550.0
+            },
+            "ZIndex": 94.0,
+            "Size": {
+              "w": 241.0,
+              "h": 100.0
+            },
+            "ShortId": 3334621104,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000298",
+                "Owner": "0x100000000000295"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000299",
+                "Owner": "0x100000000000295",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002AA",
+                    "Target": "0x1000000000002A7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_C21F42E3",
+            "Id": "0x10000000000029C",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_C21F42E3.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_C21F42E3.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4092.0,
+              "y": 1725.0
+            },
+            "ZIndex": 96.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 3256828643,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000029F",
+                "Owner": "0x10000000000029C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002A0",
+                "Owner": "0x10000000000029C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002AA",
+                    "Target": "0x1000000000002A7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_73129248",
+            "Id": "0x1000000000002D0",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_73129248.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_73129248.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2492.0,
+              "y": 325.0
+            },
+            "ZIndex": 115.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 1930596936,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002D3",
+                "Owner": "0x1000000000002D0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002D4",
+                "Owner": "0x1000000000002D0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002E3",
+                    "Target": "0x1000000000002E0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_E2E5818A",
+            "Id": "0x1000000000002D7",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_E2E5818A.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_E2E5818A.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 2517.0,
+              "y": 600.0
+            },
+            "ZIndex": 117.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 3806691722,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002DA",
+                "Owner": "0x1000000000002D7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002DB",
+                "Owner": "0x1000000000002D7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002EA",
+                    "Target": "0x1000000000002E7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_8119DDDD",
+            "Id": "0x1000000000002EF",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_8119DDDD.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_8119DDDD.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3342.0,
+              "y": 175.0
+            },
+            "ZIndex": 123.0,
+            "Size": {
+              "w": 291.0,
+              "h": 125.0
+            },
+            "ShortId": 2165956061,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002F2",
+                "Owner": "0x1000000000002EF"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002F3",
+                "Owner": "0x1000000000002EF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000302",
+                    "Target": "0x1000000000002FF"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_A73CC121",
+            "Id": "0x1000000000002F6",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_A73CC121.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_A73CC121.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3342.0,
+              "y": 375.0
+            },
+            "ZIndex": 125.0,
+            "Size": {
+              "w": 291.0,
+              "h": 100.0
+            },
+            "ShortId": 2805776673,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002F9",
+                "Owner": "0x1000000000002F6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002FA",
+                "Owner": "0x1000000000002F6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000302",
+                    "Target": "0x1000000000002FF"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_8ADA6DF7",
+            "Id": "0x100000000000307",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_8ADA6DF7.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_8ADA6DF7.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4117.0,
+              "y": 675.0
+            },
+            "ZIndex": 130.0,
+            "Size": {
+              "w": 341.0,
+              "h": 150.0
+            },
+            "ShortId": 2329570807,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000030A",
+                "Owner": "0x100000000000307"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000030B",
+                "Owner": "0x100000000000307",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000312",
+                    "Target": "0x10000000000030F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_F39038BC",
+            "Id": "0x100000000000317",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_F39038BC.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_F39038BC.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3242.0,
+              "y": 575.0
+            },
+            "ZIndex": 133.0,
+            "Size": {
+              "w": 266.0,
+              "h": 100.0
+            },
+            "ShortId": 4086315196,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000031A",
+                "Owner": "0x100000000000317"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000031B",
+                "Owner": "0x100000000000317",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000328",
+                    "Target": "0x100000000000325"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_13CED116",
+            "Id": "0x10000000000031E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_13CED116.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_13CED116.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 3242.0,
+              "y": 750.0
+            },
+            "ZIndex": 135.0,
+            "Size": {
+              "w": 291.0,
+              "h": 125.0
+            },
+            "ShortId": 332321046,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000321",
+                "Owner": "0x10000000000031E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000322",
+                "Owner": "0x10000000000031E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000328",
+                    "Target": "0x100000000000325"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_0640EF65",
+            "Id": "0x10000000000032E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Dlg_0640EF65.DisplayName",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Dlg_0640EF65.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 4167.0,
+              "y": 325.0
+            },
+            "ZIndex": 141.0,
+            "Size": {
+              "w": 291.0,
+              "h": 125.0
+            },
+            "ShortId": 104918885,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000331",
+                "Owner": "0x10000000000032E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000332",
+                "Owner": "0x10000000000032E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000312",
+                    "Target": "0x10000000000030F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_832D9C58",
+            "Id": "0x100000000000105",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Ufo_832D9C58.DisplayName",
+            "ExternalId": "",
+            "ShortId": 2200804440
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_4D6B692D",
+            "Id": "0x100000000000107",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Ufo_4D6B692D.DisplayName",
+            "ExternalId": "",
+            "ShortId": 1298884909
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_C9593E81",
+            "Id": "0x100000000000109",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Ufo_C9593E81.DisplayName",
+            "ExternalId": "",
+            "ShortId": 3378069121
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_94771559",
+            "Id": "0x10000000000010B",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Ufo_94771559.DisplayName",
+            "ExternalId": "",
+            "ShortId": 2490832217
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_14A37258",
+            "Id": "0x10000000000010D",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Ufo_14A37258.DisplayName",
+            "ExternalId": "",
+            "ShortId": 346255960
+          }
+        }
+      ]
+    }
+  ],
+  "ScriptMethods": [],
+  "Hierarchy": {
+    "Id": "0x100000000000001",
+    "TechnicalName": "ProjectTheseus",
+    "Type": "Project",
+    "Children": [
+      {
+        "Id": "0x300000043CE43F7",
+        "TechnicalName": "Flow",
+        "Type": "Flow",
+        "Children": [
+          {
+            "Id": "0x10000000000010F",
+            "TechnicalName": "FFr_C9C294A8",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000116",
+            "TechnicalName": "Dlg_3EB04445",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000011D",
+            "TechnicalName": "Dlg_EE0B5AAB",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000126",
+            "TechnicalName": "FFr_D7819200",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000012E",
+            "TechnicalName": "Dlg_14D539F1",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000135",
+            "TechnicalName": "Dlg_0598DF66",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000013E",
+            "TechnicalName": "FFr_1D4C131F",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000146",
+            "TechnicalName": "FFr_15761205",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000014E",
+            "TechnicalName": "Dlg_E06416DD",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000155",
+            "TechnicalName": "Dlg_4F39810C",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000015C",
+            "TechnicalName": "Dlg_797601A3",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000163",
+            "TechnicalName": "Dlg_40CCD3C8",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000016E",
+            "TechnicalName": "FFr_183E738A",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000176",
+            "TechnicalName": "Dlg_B12149AA",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000017D",
+            "TechnicalName": "FFr_FDDDD103",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000198",
+            "TechnicalName": "Dlg_9C876F10",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000019F",
+            "TechnicalName": "Dlg_E7B72EDC",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000001A9",
+            "TechnicalName": "FFr_D1F51576",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000001B0",
+            "TechnicalName": "FFr_F3B127A7",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000001B9",
+            "TechnicalName": "Dlg_801E06D6",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000001C0",
+            "TechnicalName": "Dlg_59D5859E",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000001C7",
+            "TechnicalName": "Dlg_0AB04DF9",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000001CE",
+            "TechnicalName": "Dlg_A829F05A",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000001D9",
+            "TechnicalName": "FFr_38321A29",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000001E4",
+            "TechnicalName": "FFr_40083AB1",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000001F2",
+            "TechnicalName": "Dlg_C41E97EF",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000001FA",
+            "TechnicalName": "FFr_072249C5",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000202",
+            "TechnicalName": "Dlg_D1C35286",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000209",
+            "TechnicalName": "Dlg_A670381D",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000212",
+            "TechnicalName": "FFr_527360B9",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000021A",
+            "TechnicalName": "Dlg_BAAB7072",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000221",
+            "TechnicalName": "Dlg_3714787B",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000022A",
+            "TechnicalName": "Dlg_963B3D6A",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000233",
+            "TechnicalName": "FFr_DBFE6192",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000023A",
+            "TechnicalName": "FFr_9CBBEB18",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000243",
+            "TechnicalName": "Dlg_43B43A0D",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000024A",
+            "TechnicalName": "Dlg_296AF01D",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000252",
+            "TechnicalName": "Dlg_5FCE582C",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000259",
+            "TechnicalName": "Dlg_20152C0E",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000266",
+            "TechnicalName": "FFr_97BEC46D",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000026D",
+            "TechnicalName": "FFr_80AEAF68",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000275",
+            "TechnicalName": "FFr_B5EE63BC",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000027F",
+            "TechnicalName": "Dlg_B5899093",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000287",
+            "TechnicalName": "Dlg_1875F74C",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000028E",
+            "TechnicalName": "Dlg_773E673A",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000295",
+            "TechnicalName": "Dlg_C6C247B0",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000029C",
+            "TechnicalName": "Dlg_C21F42E3",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000002A7",
+            "TechnicalName": "FFr_42AF0758",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000002B4",
+            "TechnicalName": "FFr_99D4D21D",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000002BE",
+            "TechnicalName": "FFr_5C0A36D3",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000002C8",
+            "TechnicalName": "FFr_14CF3288",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000002D0",
+            "TechnicalName": "Dlg_73129248",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000002D7",
+            "TechnicalName": "Dlg_E2E5818A",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000002E0",
+            "TechnicalName": "FFr_FA1A5D97",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000002E7",
+            "TechnicalName": "FFr_893B9961",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x1000000000002EF",
+            "TechnicalName": "Dlg_8119DDDD",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000002F6",
+            "TechnicalName": "Dlg_A73CC121",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x1000000000002FF",
+            "TechnicalName": "FFr_CEAA2EB8",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000307",
+            "TechnicalName": "Dlg_8ADA6DF7",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000030F",
+            "TechnicalName": "FFr_C93ED261",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x100000000000317",
+            "TechnicalName": "Dlg_F39038BC",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x10000000000031E",
+            "TechnicalName": "Dlg_13CED116",
+            "Type": "Dialogue"
+          },
+          {
+            "Id": "0x100000000000325",
+            "TechnicalName": "FFr_727784DC",
+            "Type": "FlowFragment"
+          },
+          {
+            "Id": "0x10000000000032E",
+            "TechnicalName": "Dlg_0640EF65",
+            "Type": "Dialogue"
+          }
+        ]
+      },
+      {
+        "Id": "0x30000003140D3AC",
+        "TechnicalName": "Locations",
+        "Type": "Locations"
+      },
+      {
+        "Id": "0x3000000AC61A2B3",
+        "TechnicalName": "Entities",
+        "Type": "Entities"
+      },
+      {
+        "Id": "0x30000004C3DAF54",
+        "TechnicalName": "Assets",
+        "Type": "Assets",
+        "Children": [
+          {
+            "Id": "0x100000000000105",
+            "TechnicalName": "Ufo_832D9C58",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x100000000000107",
+            "TechnicalName": "Ufo_4D6B692D",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x100000000000109",
+            "TechnicalName": "Ufo_C9593E81",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x10000000000010B",
+            "TechnicalName": "Ufo_94771559",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x10000000000010D",
+            "TechnicalName": "Ufo_14A37258",
+            "Type": "AssetsUserFolder"
+          }
+        ]
+      },
+      {
+        "Id": "0x300000029CF057C",
+        "TechnicalName": "TemplateDesign",
+        "Type": "TemplateDesign",
+        "Children": [
+          {
+            "Id": "0x3000000D2404DC0",
+            "TechnicalName": "Features",
+            "Type": "Features",
+            "Children": [
+              {
+                "Id": "0x100000000000008",
+                "TechnicalName": "DefaultBasicCharacterFeature",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x100000000000043",
+                "TechnicalName": "DefaultExtendedCharacterFeature",
+                "Type": "Feature"
+              }
+            ]
+          },
+          {
+            "Id": "0x30000009AF68DCD",
+            "TechnicalName": "Templates",
+            "Type": "Templates",
+            "Children": [
+              {
+                "Id": "0x300000078B45A71",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x10000000000006B",
+                    "TechnicalName": "DefaultSupportingCharacterTemplate",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x100000000000095",
+                    "TechnicalName": "DefaultMainCharacterTemplate",
+                    "Type": "Template"
+                  }
+                ]
+              },
+              {
+                "Id": "0x30000006D1BC275",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000030B5ACF",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x30000008DD5C0F2",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000092CF598E",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000030635118",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000A715C057",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x30000005314E813",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x30000004264B29C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000FB371D5C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000013DF3A1A",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000ADA9FA17",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000ECC00F83",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000F514339C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000096812FC1",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000CC5A07F0",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000DCC67F9D",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000BA022E2F",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              }
+            ]
+          },
+          {
+            "Id": "0x30000002C0951AE",
+            "TechnicalName": "PropertyTemplates",
+            "Type": "TraitTemplatesFolder",
+            "Children": [
+              {
+                "Id": "0x30000006E2C178B",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x3000000BB12F1B8",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x30000006F82D78E",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x300000037DCE3F0",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x30000003630A240",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x3000000D745C449",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "0x30000002B4F4C54",
+        "TechnicalName": "GlobalVariables",
+        "Type": "GlobalVariables"
+      },
+      {
+        "Id": "0x3000000103AA2F0",
+        "TechnicalName": "Documents",
+        "Type": "Documents"
+      },
+      {
+        "Id": "0x3000000236F7272",
+        "TechnicalName": "Journeys",
+        "Type": "Journeys"
+      },
+      {
+        "Id": "0x3000000F917511B",
+        "TechnicalName": "ProjectSettings",
+        "Type": "ProjectSettingsFolder",
+        "Children": [
+          {
+            "Id": "0x1000000000000FA",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsGeneral"
+          },
+          {
+            "Id": "0x1000000000000FB",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsJourneys"
+          },
+          {
+            "Id": "0x1000000000000FC",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsLocation"
+          },
+          {
+            "Id": "0x1000000000000FD",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsFlow"
+          }
+        ]
+      },
+      {
+        "Id": "0x3000000173C3392",
+        "TechnicalName": "",
+        "Type": "RuleSets",
+        "Children": [
+          {
+            "Id": "0x1000000000000FF",
+            "TechnicalName": "",
+            "Type": "RuleSet",
+            "Children": [
+              {
+                "Id": "0x100000000000102",
+                "TechnicalName": "",
+                "Type": "RuleSetPackage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

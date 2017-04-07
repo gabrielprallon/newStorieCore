@@ -1,0 +1,37 @@
+Armless Jorrah idle- 0,2 seg cada frame
+Armless Jorrah spec. move- 0,1 seg cada frame
+
+Jorrah idle- 0,2 seg cada frame
+Jorrah spec. move- 0,1 seg cada frame
+
+Blue Soldier idle- 0,2 seg cada frame
+Blue Soldier spec. move- 0,15 seg cada frame
+
+Red Soldier idle- 0,2 seg cada frame
+Red soldier spec. move- 0,15 seg cada frame
+
+Druida idle- 0,2 seg cada frame
+Druida spec. move- 0,1 seg cada frame
+
+Mercenário idle- 0,15 seg cada frame
+Mercenário spec. move- 0,2 seg cada frame
+
+Nameless idle- 0,2 seg cada frame
+Nameless spec. move- 0,1 seg cada frame
+
+Rex idle- 0,2 seg cada frame
+Rex spec. move- 0,2 seg cada frame
+
+Scout idle- 0,2 seg cada frame
+Scout spec. move- 0,15 seg cada frame
+
+Young Hero idle- 0,2 seg cada frame
+Young Hero spec. move 1- 0,1 seg cada frame
+Young Hero spec. move 2- 0,15 seg cada frame
+
+Minotauro idle- 0,2 seg cada frame
+Minotauro spec. move- 0,15 seg cada frame
+
+Coin animation- 0,08 seg cada frame
+
+Scenary (birds and fire)- 0,2 seg cada frame
