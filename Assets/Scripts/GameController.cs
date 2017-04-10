@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Articy.Unity;
+using Articy.Unity.Interfaces;
 using System;
 
 public class GameController : MonoBehaviour {
@@ -10,16 +12,23 @@ public class GameController : MonoBehaviour {
     private GameObject m_storyScreen;
     [SerializeField]
     private GameObject m_characterScreen;
+    /*
     [SerializeField]
     private GameObject m_buttonOne;
     [SerializeField]
     private GameObject m_buttonTwo;
     [SerializeField]
     private GameObject m_buttonThree;
+    */
+
+    [SerializeField]
+    private List<GameObject> m_buttons;
     [SerializeField]
     private Sprite m_CharButton;
     [SerializeField]
     private Sprite m_StoryButton;
+    [SerializeField]
+    private GameObject m_ScrollView;
 
     [SerializeField]
     private GameObject m_buttonCharacter;
@@ -57,6 +66,10 @@ public class GameController : MonoBehaviour {
     
     private List<GameObject> m_StoryNodesList;
 
+    private int m_ButtonCounter;
+
+
+
     void Awake()
     {
         energyLoader();
@@ -66,7 +79,7 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start() {
         energyTimeSaving();
-
+        ScrollToBottom();
     }
 
     // Update is called once per frame
@@ -93,19 +106,24 @@ public class GameController : MonoBehaviour {
         {
             m_storyScreen.SetActive(true);
             m_characterScreen.SetActive(false);
-            m_buttonOne.SetActive(true);
-            m_buttonTwo.SetActive(true);
-            m_buttonThree.SetActive(true);
+            for(int i=0; i<=m_ButtonCounter; i++)
+            {
+                m_buttons[i].SetActive(true);
+            }
+            m_ScrollView.SetActive(true);
             m_buttonCharacter.GetComponent<Image>().sprite = m_CharButton;
-
+            
         }
         else
         {
             m_storyScreen.SetActive(false);
             m_characterScreen.SetActive(true);
-            m_buttonOne.SetActive(false);
-            m_buttonTwo.SetActive(false);
-            m_buttonThree.SetActive(false);
+            for (int i = 0; i <= m_ButtonCounter; i++)
+            {
+                m_buttons[i].SetActive(false);
+            }
+
+            m_ScrollView.SetActive(false);
             m_buttonCharacter.GetComponent<Image>().sprite = m_StoryButton;
         }
 
@@ -209,9 +227,31 @@ public class GameController : MonoBehaviour {
         autoScroll.velocity = new Vector2(0f, scrollSpeed);
     }
     //scroll to botton after load all choices
-    void ScrollToBottom(ScrollRect scrollRect)
+    void ScrollToBottom()
     {
-        scrollRect.normalizedPosition = new Vector2(0, 0);
+        GameObject.Find("Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 0.5f;
     }
 
+    public void SetButton (IList<Branch> aBranches)
+    {
+        for (int i = 0; i < m_buttons.Count; i++)
+            m_buttons[i].SetActive(false);
+        for (int i = 0; i < aBranches.Count; i++)
+        {
+            m_buttons[i].SetActive(true);
+            m_buttons[i].GetComponent<ButtonController>().UpdateButton(aBranches[i]);
+            m_ButtonCounter = i;
+        }
+    }
+
+    public void GoToBranch(Branch nextBranch)
+    {
+        GetComponent<DialogueHandler>().GotToBranch(nextBranch);
+    }
+    //armazenar uma lista de branch reconstruir os botÕes
+
+    void Save()
+    {
+
+    }
 }

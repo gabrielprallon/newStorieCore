@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
+using Articy.ProjectTheseus;
 
 public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
@@ -22,9 +23,10 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
         var objWithText = aObject as IObjectWithText;
         if (objWithText != null)
         {
-            Debug.Log(objWithText.Text); // teste para ler o texto no console
-            // Alguma coisa aqui tem que receber o texto de "objWithText.Text" isso pode ser o texto tanto de um flow como de um dialog fragment
-            // na real aqui tem que chamar a função que spawna storynodes/storyblocks (nao lembro o nome)
+            Debug.Log(objWithText.Text);// teste para ler o texto no console
+            //Call the story block generator which spawn a story block on screen
+            GetComponent<GameController>().GenerateStoryBlock(0, objWithText.Text);
+            
         }
     }
 
@@ -34,12 +36,17 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
         // aBranches[0].DefaultDescription : Acredito que esse é o texto que tem que ir no botão, mas tem que testar.
 
         // o loop a seguir pode ser utilizado caso os branchs condicionais estejam feitos corretamente no articy, como por exemplo a opção só aparecer se tiver ouro suficiente:
+        if (aBranches.Count > 1)
+            GetComponent<GameController>().SetButton(aBranches);
+        else
+            if (aBranches.Count > 0)
+            GetComponent<ArticyFlowPlayer>().Play(aBranches[0]);
 
         foreach (var branch in aBranches)
         {
             // we only want branches that are valid
             if (!branch.IsValid) continue;
-
+                
             // ... work with our valid branch
         }
 
