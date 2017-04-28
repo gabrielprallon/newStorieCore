@@ -2380,9 +2380,7 @@
             "TechnicalName": "FFr_C9C294A8",
             "Id": "0x10000000000010F",
             "Parent": "0x300000043CE43F7",
-            "Attachments": [
-              "0x1000000000009B3"
-            ],
+            "Attachments": [],
             "DisplayName": "FFr_C9C294A8.DisplayName",
             "PreviewImage": {
               "ViewBox": {

@@ -1,0 +1,19 @@
+<ProjectInfo Version="1">
+  <Signature>6BA8BD3FC2567D9677C83C060ED84677004BEE162D714930A2FA106DC40FA054</Signature>
+  <Content>
+    <Project Guid="6e76f652-26e7-4e37-a606-62280680ae25">
+      <DisplayName Value="Project Theseus"/>
+      <DetailName Value=""/>
+      <MainProjectGuid Value="e0bc1d48-bf96-4dcf-828f-846eb2f0c881"/>
+      <IconType Value="0"/>
+      <IdProjectIcon Value="00000000-0000-0000-0000-000000000000"/>
+      <ScmProviderGuid Value="0745c2ee-abe3-451b-934e-7f597f56c0d7"/>
+      <ScmConfiguration Value=""/>
+      <CreationTimeStamp Value="636265674042018561"/>
+      <PartitionHash Value="F3D5A658C14DD52024DBEBD8D792CAB096ED869244603D4413A0BBAEBA6D1928"/>
+      <SaveFileVersion Value="55"/>
+      <ProjectType Value="0"/>
+      <IsOnlineProject Value="False"/>
+    </Project>
+  </Content>
+</ProjectInfo>

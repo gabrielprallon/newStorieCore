@@ -1,0 +1,15 @@
+<ExportPresets LastType="Unity3DExport">
+  <Preset DisplayName="" Type="Unity3DExport">
+    <ExportSettings Type="Unity3DExport">
+      <Filename>E:\unit\Projetos\newStorieCoreGit\Assets\Project Theseus.articyu3d</Filename>
+      <CustomSettings>
+        <Option Name="set_Localization" Value="True"/>
+        <Option Name="set_TextFormatter" Value="Unity"/>
+      </CustomSettings>
+      <PackageStates>
+        <State Id="72057594037928194" Enabled="1"/>
+      </PackageStates>
+      <SelectedRuleSet>72057594037928191</SelectedRuleSet>
+    </ExportSettings>
+  </Preset>
+</ExportPresets>

@@ -19,7 +19,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636289941370123172)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636289951879156147)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -34,7 +34,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_rHJtVrNS9kmuwz5pG7tYtw(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_6ndNL0sWk0e5eUxTKFRgw(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             setProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"), "SCProperties.m_HP",getProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"), "SCProperties.m_HP") - 20);
             print(aGlobalVariablesState, aMethodProvider, getProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"), "SCProperties.m_HP"));
@@ -44,7 +44,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_GGOPvVIWfEGXjvZfsk03Sg(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_rxZSIJ7p0UyoPfvrpByOA(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.SVar.m_Gold += 200;
             print(aGlobalVariablesState, aMethodProvider, aGlobalVariablesState.SVar.m_Gold);
@@ -55,7 +55,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_iz4EQLM4t0upcQMeZJu6lA(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_iVZgrzchtkO5BG1KbEv1jg(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.SVar.m_Gold += 500;
             print(aGlobalVariablesState, aMethodProvider, aGlobalVariablesState.SVar.m_Gold);
@@ -65,7 +65,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_vDMXCGl9iEyZd8i4KX5zw(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_nuIwnAbpykKC1iT0BDiVIw(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.SVar.m_Gold += 500;
             print(aGlobalVariablesState, aMethodProvider, aGlobalVariablesState.SVar.m_Gold);
@@ -75,7 +75,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_XGboohWFTEqutT6bwS2sA(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_ewu736A8wUOXODjYxjhLeg(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             print(aGlobalVariablesState, aMethodProvider, aGlobalVariablesState.SVar.m_Gold);
         }
@@ -84,7 +84,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_tkYoum4WEK5XQvVTwNaw(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public bool Script_yie2N1NdIU2PV0hvP9JsQ(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             return (getProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"), "SCProperties.m_HP")>0)&&(getProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"),"SCProperties.m_MP")>0);
         }
@@ -93,7 +93,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_FOsYu1XCkGYqN62tBh2Gg(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_WakB1FWWSUKHx7Jj76RT9g(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             print(aGlobalVariablesState, aMethodProvider, getProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"), "SCProperties.m_HP"));
         }
@@ -102,7 +102,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_CmCieXXkOq0XRHHTjgfA(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_SrwHKbG7K0KggebL0xKuQg(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             print(aGlobalVariablesState, aMethodProvider, getProp(aGlobalVariablesState, aMethodProvider , getObj(aGlobalVariablesState, aMethodProvider, "m_Jorrah"), "SCProperties.m_HP"));
         }
@@ -111,7 +111,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_cul8edxEZEWpyffGEh8dQ(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public bool Script_k313rIlVREojsl6VZdT5A(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             return aGlobalVariablesState.SVar.m_Gold <= 700;
         }
@@ -120,7 +120,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         /// ObjectID: 0x0
         /// Articy Object ref: articy://localhost/view/6e76f652-26e7-4e37-a606-62280680ae25/0?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_7mxwUsJcS02wgLeekhRQ6g(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public bool Script_gchIE3OffUyvN64avYFu2A(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             return aGlobalVariablesState.SVar.m_Gold >= 1000;
         }
@@ -135,16 +135,16 @@ namespace Articy.ProjectTheseus.GlobalVariables
         {
             Conditions = new System.Collections.Generic.Dictionary<int, System.Func<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider, bool>>();
             Instructions = new System.Collections.Generic.Dictionary<int, System.Action<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider>>();
-            Instructions.Add(1842263717, this.Script_rHJtVrNS9kmuwz5pG7tYtw);
-            Instructions.Add(-200995558, this.Script_GGOPvVIWfEGXjvZfsk03Sg);
-            Instructions.Add(445912059, this.Script_iz4EQLM4t0upcQMeZJu6lA);
-            Instructions.Add(-1841825941, this.Script_vDMXCGl9iEyZd8i4KX5zw);
-            Instructions.Add(1431687531, this.Script_XGboohWFTEqutT6bwS2sA);
-            Conditions.Add(934324181, this.Script_tkYoum4WEK5XQvVTwNaw);
-            Instructions.Add(1704229764, this.Script_FOsYu1XCkGYqN62tBh2Gg);
-            Instructions.Add(300086350, this.Script_CmCieXXkOq0XRHHTjgfA);
-            Conditions.Add(-222081422, this.Script_cul8edxEZEWpyffGEh8dQ);
-            Conditions.Add(-765363404, this.Script_7mxwUsJcS02wgLeekhRQ6g);
+            Instructions.Add(-1412524600, this.Script_6ndNL0sWk0e5eUxTKFRgw);
+            Instructions.Add(385531679, this.Script_rxZSIJ7p0UyoPfvrpByOA);
+            Instructions.Add(209692210, this.Script_iVZgrzchtkO5BG1KbEv1jg);
+            Instructions.Add(-506391355, this.Script_nuIwnAbpykKC1iT0BDiVIw);
+            Instructions.Add(780639557, this.Script_ewu736A8wUOXODjYxjhLeg);
+            Conditions.Add(2141104067, this.Script_yie2N1NdIU2PV0hvP9JsQ);
+            Instructions.Add(-889114025, this.Script_WakB1FWWSUKHx7Jj76RT9g);
+            Instructions.Add(378442460, this.Script_SrwHKbG7K0KggebL0xKuQg);
+            Conditions.Add(1732475664, this.Script_k313rIlVREojsl6VZdT5A);
+            Conditions.Add(-1383541288, this.Script_gchIE3OffUyvN64avYFu2A);
         }
         #endregion
         
