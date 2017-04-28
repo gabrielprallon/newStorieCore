@@ -14,3 +14,123 @@ using UnityEngine;
 using Articy.Unity.Interfaces;
 using Articy.Unity;
 
+namespace Articy.ProjectTheseus.GlobalVariables
+{
+    
+    
+    // variables for Project theseus
+    [Serializable()]
+    public class SVar : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // gold to spend
+        public int m_Gold
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(0, value);
+            }
+        }
+        
+        // controlls if Jorrah is on screen
+        public bool c_Jorrah
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(0, value);
+            }
+        }
+        
+        // controlls if Minotaur is on screen
+        public bool c_Minotaur
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(1);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(1, value);
+            }
+        }
+        
+        // shows the actual scenario
+        public string m_Scenario
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(0, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("SVar.m_Gold", 0);
+            aStorage.RegisterVariable("SVar.c_Jorrah", false);
+            aStorage.RegisterVariable("SVar.c_Minotaur", false);
+            aStorage.RegisterVariable("SVar.m_Scenario", "camp");
+        }
+    }
+}
+namespace Articy.ProjectTheseus.GlobalVariables
+{
+    
+    
+    // controlls all chars on screen
+    [Serializable()]
+    public class SChar : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // 
+        public bool c_Jorrah
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(2);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
+            }
+        }
+        
+        // 
+        public bool c_Minotaur
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(3);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("SChar.c_Jorrah", false);
+            aStorage.RegisterVariable("SChar.c_Minotaur", false);
+        }
+    }
+}

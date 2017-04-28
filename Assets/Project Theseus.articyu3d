@@ -3,7 +3,7 @@
     "set_Localization": "True",
     "set_TextFormatter": "Unity",
     "set_UseScriptSupport": "True",
-    "ObjectDefinitionsHash": "1C6AD4A4B8B1CB274F6DD5D443A4E475B1B7EDBDE9977437A2FCC25E93D0323F"
+    "ObjectDefinitionsHash": "BAF2B1333CF987E8E1F636BF34D45598970CBAB63A8DA1A36D138E24A848F46F"
   },
   "Project": {
     "Name": "Project Theseus",
@@ -11,7 +11,56 @@
     "Guid": "6e76f652-26e7-4e37-a606-62280680ae25",
     "TechnicalName": "ProjectTheseus"
   },
-  "GlobalVariables": [],
+  "GlobalVariables": [
+    {
+      "Namespace": "SVar",
+      "Description": "variables for Project theseus",
+      "Variables": [
+        {
+          "Variable": "m_Gold",
+          "Type": "Integer",
+          "Value": "0",
+          "Description": "gold to spend"
+        },
+        {
+          "Variable": "c_Jorrah",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": "controlls if Jorrah is on screen"
+        },
+        {
+          "Variable": "c_Minotaur",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": "controlls if Minotaur is on screen"
+        },
+        {
+          "Variable": "m_Scenario",
+          "Type": "String",
+          "Value": "camp",
+          "Description": "shows the actual scenario"
+        }
+      ]
+    },
+    {
+      "Namespace": "SChar",
+      "Description": "controlls all chars on screen",
+      "Variables": [
+        {
+          "Variable": "c_Jorrah",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        },
+        {
+          "Variable": "c_Minotaur",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        }
+      ]
+    }
+  ],
   "ObjectDefinitions": [
     {
       "Type": "Point",
@@ -993,6 +1042,220 @@
                 "PlaceholderValue": "",
                 "IsLocalized": "True",
                 "AllowsLinebreaks": "True"
+              }
+            ]
+          },
+          {
+            "TechnicalName": "DefaultBasicCharacterFeature",
+            "DisplayName": "Basic Character Properties",
+            "Properties": [
+              {
+                "Property": "Age",
+                "Type": "Float",
+                "DisplayName": "Age"
+              },
+              {
+                "Property": "Species",
+                "Type": "String",
+                "DisplayName": "Species",
+                "Localizable": true
+              },
+              {
+                "Property": "BornIn",
+                "Type": "String",
+                "DisplayName": "Born in",
+                "Localizable": true
+              },
+              {
+                "Property": "Sex",
+                "Type": "Sex",
+                "DisplayName": "Sex",
+                "Localizable": true
+              },
+              {
+                "Property": "Occupation",
+                "Type": "String",
+                "DisplayName": "Profession",
+                "Localizable": true
+              },
+              {
+                "Property": "Accent",
+                "Type": "String",
+                "DisplayName": "Voice",
+                "Localizable": true
+              },
+              {
+                "Property": "Personality",
+                "Type": "String",
+                "DisplayName": "Personality",
+                "Localizable": true
+              },
+              {
+                "Property": "Appearance",
+                "Type": "String",
+                "DisplayName": "Appearance",
+                "Localizable": true
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Age",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "Species",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Enum",
+                "IsLocalized": "True",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Accent",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Personality",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "p_Character",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "p_Character",
+        "DisplayName": "Story character",
+        "Features": [
+          {
+            "TechnicalName": "SCProperties",
+            "DisplayName": "SCProperties",
+            "Properties": [
+              {
+                "Property": "m_OnScreen",
+                "Type": "Bool",
+                "DisplayName": "on Screen?"
+              },
+              {
+                "Property": "m_CharProperties",
+                "Type": "Script_Condition",
+                "DisplayName": "Script"
+              },
+              {
+                "Property": "m_NPC",
+                "Type": "Bool",
+                "DisplayName": "Is NPC?"
+              },
+              {
+                "Property": "m_ID",
+                "Type": "Float",
+                "DisplayName": "ID"
+              },
+              {
+                "Property": "m_HP",
+                "Type": "Float",
+                "DisplayName": "HP"
+              },
+              {
+                "Property": "m_MP",
+                "Type": "Float",
+                "DisplayName": "MP"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "m_OnScreen",
+                "Type": "Boolean",
+                "DisplayAsCombobox": "False"
+              },
+              {
+                "Property": "m_CharProperties",
+                "Type": "Script",
+                "ScriptType": "Condition",
+                "PlaceholderValue": ""
+              },
+              {
+                "Property": "m_NPC",
+                "Type": "Boolean",
+                "DisplayAsCombobox": "False"
+              },
+              {
+                "Property": "m_ID",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "m_HP",
+                "Type": "Number",
+                "MinValue": "0",
+                "MaxValue": "100",
+                "Precision": "3",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "m_MP",
+                "Type": "Number",
+                "MinValue": "0",
+                "MaxValue": "100",
+                "Precision": "3",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
               }
             ]
           },
@@ -2117,7 +2380,9 @@
             "TechnicalName": "FFr_C9C294A8",
             "Id": "0x10000000000010F",
             "Parent": "0x300000043CE43F7",
-            "Attachments": [],
+            "Attachments": [
+              "0x1000000000009B3"
+            ],
             "DisplayName": "FFr_C9C294A8.DisplayName",
             "PreviewImage": {
               "ViewBox": {
@@ -2155,7 +2420,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "setProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\",getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\") - 20);\nprint(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));",
                 "Id": "0x100000000000113",
                 "Owner": "0x10000000000010F",
                 "Connections": [
@@ -2169,7 +2434,14 @@
                     "Label": "",
                     "TargetPin": "0x100000000000119",
                     "Target": "0x100000000000116"
-                  },
+                  }
+                ]
+              },
+              {
+                "Text": "SVar.m_Gold += 200;\nprint(SVar.m_Gold);\nprint(\"gold\");",
+                "Id": "0x100000000000D9B",
+                "Owner": "0x10000000000010F",
+                "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
@@ -2244,7 +2516,14 @@
                     "Label": "",
                     "TargetPin": "0x100000000000131",
                     "Target": "0x10000000000012E"
-                  },
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x100000000000C93",
+                "Owner": "0x100000000000126",
+                "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
@@ -2741,13 +3020,6 @@
                 "Id": "0x1000000000001DC",
                 "Owner": "0x1000000000001D9"
               }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x1000000000001DD",
-                "Owner": "0x1000000000001D9"
-              }
             ]
           }
         },
@@ -2795,8 +3067,26 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "SVar.m_Gold += 500;\nprint(SVar.m_Gold);",
                 "Id": "0x1000000000001E8",
+                "Owner": "0x1000000000001E4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000022D",
+                    "Target": "0x10000000000022A"
+                  }
+                ]
+              },
+              {
+                "Text": "SVar.m_Gold += 500;\nprint(SVar.m_Gold);",
+                "Id": "0x100000000000E82",
                 "Owner": "0x1000000000001E4",
                 "Connections": [
                   {
@@ -2809,17 +3099,6 @@
                     "Label": "",
                     "TargetPin": "0x1000000000001F5",
                     "Target": "0x1000000000001F2"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x10000000000022D",
-                    "Target": "0x10000000000022A"
                   }
                 ]
               }
@@ -2870,7 +3149,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "print(SVar.m_Gold);",
                 "Id": "0x1000000000001FE",
                 "Owner": "0x1000000000001FA",
                 "Connections": [
@@ -3381,13 +3660,6 @@
                 "Id": "0x1000000000002AA",
                 "Owner": "0x1000000000002A7"
               }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x1000000000002AB",
-                "Owner": "0x1000000000002A7"
-              }
             ]
           }
         },
@@ -3871,13 +4143,6 @@
                 "Id": "0x100000000000312",
                 "Owner": "0x10000000000030F"
               }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000000000313",
-                "Owner": "0x10000000000030F"
-              }
             ]
           }
         },
@@ -3977,19 +4242,19 @@
             "ZIndex": 1.0,
             "Size": {
               "w": 241.0,
-              "h": 100.0
+              "h": 110.0
             },
             "ShortId": 1051739205,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\")>0)&&\n(getProp( getObj(\"m_Jorrah\"),\n\"SCProperties.m_MP\")>0);\n\n",
                 "Id": "0x100000000000119",
                 "Owner": "0x100000000000116"
               }
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "print(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));",
                 "Id": "0x10000000000011A",
                 "Owner": "0x100000000000116",
                 "Connections": [
@@ -4053,7 +4318,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "print(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));",
                 "Id": "0x100000000000121",
                 "Owner": "0x10000000000011D",
                 "Connections": [
@@ -4942,7 +5207,7 @@
             "ShortId": 3290339311,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "SVar.m_Gold <= 700;",
                 "Id": "0x1000000000001F5",
                 "Owner": "0x1000000000001F2"
               }
@@ -5262,7 +5527,7 @@
             "ShortId": 2520464746,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "SVar.m_Gold >= 1000;",
                 "Id": "0x10000000000022D",
                 "Owner": "0x10000000000022A"
               }
@@ -6378,6 +6643,177 @@
           }
         },
         {
+          "Type": "p_Character",
+          "Properties": {
+            "TechnicalName": "m_Minotaur",
+            "Id": "0x100000000000342",
+            "Parent": "0x100000000000340",
+            "Attachments": [],
+            "DisplayName": "m_Minotaur.DisplayName",
+            "Color": {
+              "r": 0.3254902,
+              "g": 0.494117647,
+              "b": 0.09803922
+            },
+            "Text": "m_Minotaur.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "ShortId": 4097622468
+          },
+          "Template": {
+            "SCProperties": {
+              "m_OnScreen": null,
+              "m_CharProperties": null,
+              "m_NPC": null,
+              "m_ID": 2.0,
+              "m_HP": 100.0,
+              "m_MP": 100.0
+            },
+            "DefaultBasicCharacterFeature": {
+              "Age": null,
+              "Species": "m_Minotaur.DefaultBasicCharacterFeature.Species",
+              "BornIn": "",
+              "Sex": null,
+              "Occupation": "",
+              "Accent": "",
+              "Personality": "",
+              "Appearance": ""
+            }
+          }
+        },
+        {
+          "Type": "p_Character",
+          "Properties": {
+            "TechnicalName": "m_Jorrah",
+            "Id": "0x1000000000009B3",
+            "Parent": "0x100000000000340",
+            "Attachments": [],
+            "DisplayName": "m_Jorrah.DisplayName",
+            "Color": {
+              "r": 0.3254902,
+              "g": 0.494117647,
+              "b": 0.09803922
+            },
+            "Text": "m_Jorrah.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 20.0,
+              "y": 20.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "ShortId": 410962922
+          },
+          "Template": {
+            "SCProperties": {
+              "m_OnScreen": true,
+              "m_CharProperties": "",
+              "m_NPC": null,
+              "m_ID": 1.0,
+              "m_HP": 100.0,
+              "m_MP": 100.0
+            },
+            "DefaultBasicCharacterFeature": {
+              "Age": 0.0,
+              "Species": "",
+              "BornIn": "",
+              "Sex": null,
+              "Occupation": "",
+              "Accent": "",
+              "Personality": "",
+              "Appearance": ""
+            }
+          }
+        },
+        {
+          "Type": "p_Character",
+          "Properties": {
+            "TechnicalName": "m_Teste",
+            "Id": "0x100000000000E7C",
+            "Parent": "0x100000000000340",
+            "Attachments": [],
+            "DisplayName": "m_Teste.DisplayName",
+            "Color": {
+              "r": 0.3254902,
+              "g": 0.494117647,
+              "b": 0.09803922
+            },
+            "Text": "m_Teste.Text",
+            "ExternalId": "",
+            "Position": {
+              "x": 40.0,
+              "y": 40.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "ShortId": 1275882159
+          },
+          "Template": {
+            "SCProperties": {
+              "m_OnScreen": null,
+              "m_CharProperties": null,
+              "m_NPC": null,
+              "m_ID": 2.0,
+              "m_HP": 100.0,
+              "m_MP": 100.0
+            },
+            "DefaultBasicCharacterFeature": {
+              "Age": null,
+              "Species": "",
+              "BornIn": "",
+              "Sex": null,
+              "Occupation": "",
+              "Accent": "",
+              "Personality": "",
+              "Appearance": ""
+            }
+          }
+        },
+        {
           "Type": "UserFolder",
           "Properties": {
             "TechnicalName": "Ufo_832D9C58",
@@ -6430,6 +6866,39 @@
             "DisplayName": "Ufo_14A37258.DisplayName",
             "ExternalId": "",
             "ShortId": 346255960
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_66DF6E59",
+            "Id": "0x100000000000346",
+            "Parent": "0x3000000103AA2F0",
+            "DisplayName": "Ufo_66DF6E59.DisplayName",
+            "ExternalId": "",
+            "ShortId": 1725918809
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_3DFEBE44",
+            "Id": "0x100000000000348",
+            "Parent": "0x100000000000346",
+            "DisplayName": "Ufo_3DFEBE44.DisplayName",
+            "ExternalId": "",
+            "ShortId": 1040105028
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_20DB9DA3",
+            "Id": "0x100000000000340",
+            "Parent": "0x3000000AC61A2B3",
+            "DisplayName": "Ufo_20DB9DA3.DisplayName",
+            "ExternalId": "",
+            "ShortId": 551263651
           }
         }
       ]
@@ -6776,7 +7245,31 @@
       {
         "Id": "0x3000000AC61A2B3",
         "TechnicalName": "Entities",
-        "Type": "Entities"
+        "Type": "Entities",
+        "Children": [
+          {
+            "Id": "0x100000000000340",
+            "TechnicalName": "Ufo_20DB9DA3",
+            "Type": "EntitiesUserFolder",
+            "Children": [
+              {
+                "Id": "0x100000000000342",
+                "TechnicalName": "m_Minotaur",
+                "Type": "Entity"
+              },
+              {
+                "Id": "0x1000000000009B3",
+                "TechnicalName": "m_Jorrah",
+                "Type": "Entity"
+              },
+              {
+                "Id": "0x100000000000E7C",
+                "TechnicalName": "m_Teste",
+                "Type": "Entity"
+              }
+            ]
+          }
+        ]
       },
       {
         "Id": "0x30000004C3DAF54",
@@ -6829,6 +7322,16 @@
                 "Id": "0x100000000000043",
                 "TechnicalName": "DefaultExtendedCharacterFeature",
                 "Type": "Feature"
+              },
+              {
+                "Id": "0x1000000000009EE",
+                "TechnicalName": "SCProperties",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x100000000000E02",
+                "TechnicalName": "Duarte",
+                "Type": "Feature"
               }
             ]
           },
@@ -6850,6 +7353,11 @@
                   {
                     "Id": "0x100000000000095",
                     "TechnicalName": "DefaultMainCharacterTemplate",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x1000000000009C1",
+                    "TechnicalName": "p_Character",
                     "Type": "Template"
                   }
                 ]
@@ -6954,7 +7462,19 @@
               {
                 "Id": "0x3000000BB12F1B8",
                 "TechnicalName": "",
-                "Type": "TraitTemplatesTypedFolder"
+                "Type": "TraitTemplatesTypedFolder",
+                "Children": [
+                  {
+                    "Id": "0x100000000000A66",
+                    "TechnicalName": "Is_NPC",
+                    "Type": "BooleanTraitTemplate"
+                  },
+                  {
+                    "Id": "0x100000000000A6A",
+                    "TechnicalName": "Is_Alive",
+                    "Type": "BooleanTraitTemplate"
+                  }
+                ]
               },
               {
                 "Id": "0x30000006F82D78E",
@@ -6983,12 +7503,38 @@
       {
         "Id": "0x30000002B4F4C54",
         "TechnicalName": "GlobalVariables",
-        "Type": "GlobalVariables"
+        "Type": "GlobalVariables",
+        "Children": [
+          {
+            "Id": "0x100000000000D9D",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          },
+          {
+            "Id": "0x100000000000DBB",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          }
+        ]
       },
       {
         "Id": "0x3000000103AA2F0",
         "TechnicalName": "Documents",
-        "Type": "Documents"
+        "Type": "Documents",
+        "Children": [
+          {
+            "Id": "0x100000000000346",
+            "TechnicalName": "Ufo_66DF6E59",
+            "Type": "DocumentsUserFolder",
+            "Children": [
+              {
+                "Id": "0x100000000000348",
+                "TechnicalName": "Ufo_3DFEBE44",
+                "Type": "DocumentsUserFolder"
+              }
+            ]
+          }
+        ]
       },
       {
         "Id": "0x3000000236F7272",

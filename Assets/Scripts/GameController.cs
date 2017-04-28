@@ -68,8 +68,12 @@ public class GameController : MonoBehaviour {
 
     private int m_ButtonCounter;
 
-
-
+   /* 
+    * ATENÇAO!!!!!!!!!!!!!!!!!
+    * O UNITY N CONSEGUE IDENTIFICAR OS LIMITES DAS VARIAVEIS SETADAS PELO ARTICY
+    * CRIAR VERIFICADORES PARA CASO AS VARIAVEIS ULTRAPASSEM O CODIGO SETA ELA PRO VALOR CERTO
+    * EX: O PLAYER N PODE TER MENOS Q 0 DE HP, CASO O HP - DANO CAUSADO DE <0 O HP PRECISA VIRAR 0
+    */
     void Awake()
     {
         energyLoader();

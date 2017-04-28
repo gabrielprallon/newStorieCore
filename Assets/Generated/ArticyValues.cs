@@ -245,6 +245,33 @@ namespace Articy.ProjectTheseus
     
     
     [Serializable()]
+    public class ArticyValuep_CharacterTemplate : ArticyValue<Articy.ProjectTheseus.Templates.p_CharacterTemplate>
+    {
+    }
+}
+namespace Articy.ProjectTheseus
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueSCPropertiesFeature : ArticyValue<Articy.ProjectTheseus.Features.SCPropertiesFeature>
+    {
+    }
+}
+namespace Articy.ProjectTheseus
+{
+    
+    
+    [Serializable()]
+    public class ArticyValuep_Character : ArticyValue<p_Character>
+    {
+    }
+}
+namespace Articy.ProjectTheseus
+{
+    
+    
+    [Serializable()]
     public class ArticyValueLocation : ArticyValue<Location>
     {
     }

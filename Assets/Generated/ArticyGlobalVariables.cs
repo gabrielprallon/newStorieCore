@@ -23,11 +23,41 @@ namespace Articy.ProjectTheseus.GlobalVariables
     public class ArticyGlobalVariables : BaseGlobalVariables
     {
         
+        [SerializeField()]
+        [HideInInspector()]
+        private SVar mSVar = new SVar();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private SChar mSChar = new SChar();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
+            variableNames.Add("SVar.m_Gold");
+            variableNames.Add("SVar.c_Jorrah");
+            variableNames.Add("SVar.c_Minotaur");
+            variableNames.Add("SVar.m_Scenario");
+            variableNames.Add("SChar.c_Jorrah");
+            variableNames.Add("SChar.c_Minotaur");
         }
         #endregion
+        
+        public SVar SVar
+        {
+            get
+            {
+                return mSVar;
+            }
+        }
+        
+        public SChar SChar
+        {
+            get
+            {
+                return mSChar;
+            }
+        }
         
         public static ArticyGlobalVariables Default
         {
@@ -39,6 +69,8 @@ namespace Articy.ProjectTheseus.GlobalVariables
         
         public override void Init()
         {
+            SVar.RegisterVariables(this);
+            SChar.RegisterVariables(this);
         }
     }
 }
