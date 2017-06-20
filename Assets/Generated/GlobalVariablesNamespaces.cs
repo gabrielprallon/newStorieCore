@@ -40,7 +40,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         }
         
         // controlls if Jorrah is on screen
-        public bool c_Jorrah
+        public bool m_Jorrah
         {
             get
             {
@@ -53,7 +53,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         }
         
         // controlls if Minotaur is on screen
-        public bool c_Minotaur
+        public bool m_Minotaur
         {
             get
             {
@@ -78,13 +78,27 @@ namespace Articy.ProjectTheseus.GlobalVariables
             }
         }
         
+        // 
+        public bool m_Monk
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(2);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
             aStorage.RegisterVariable("SVar.m_Gold", 0);
-            aStorage.RegisterVariable("SVar.c_Jorrah", false);
-            aStorage.RegisterVariable("SVar.c_Minotaur", false);
+            aStorage.RegisterVariable("SVar.m_Jorrah", false);
+            aStorage.RegisterVariable("SVar.m_Minotaur", false);
             aStorage.RegisterVariable("SVar.m_Scenario", "camp");
+            aStorage.RegisterVariable("SVar.m_Monk", false);
         }
     }
 }
@@ -105,11 +119,11 @@ namespace Articy.ProjectTheseus.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(2);
+                return _VariableStorage.Internal_GetVariableValueBoolean(3);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
             }
         }
         
@@ -118,11 +132,11 @@ namespace Articy.ProjectTheseus.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(3);
+                return _VariableStorage.Internal_GetVariableValueBoolean(4);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(4, value);
             }
         }
         

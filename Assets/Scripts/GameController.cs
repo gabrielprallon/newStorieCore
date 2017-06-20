@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 using System;
+using CharacterH;
 
 public class GameController : MonoBehaviour {
 
@@ -22,7 +23,8 @@ public class GameController : MonoBehaviour {
     */
 
     [SerializeField]
-    private List<GameObject> m_buttons;
+    private List<GameObject> m_Buttons;
+    
     [SerializeField]
     private Sprite m_CharButton;
     [SerializeField]
@@ -67,6 +69,7 @@ public class GameController : MonoBehaviour {
     private List<GameObject> m_StoryNodesList;
 
     private int m_ButtonCounter;
+    private CharacterHandler m_CH;
 
    /* 
     * ATENÇAO!!!!!!!!!!!!!!!!!
@@ -82,12 +85,17 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        m_CH = GetComponent<CharacterHandler>();
         energyTimeSaving();
         ScrollToBottom();
     }
 
     // Update is called once per frame
     void Update() {
+        if (m_characterScreenOn == false)
+        {
+            m_CH.CharacterPlaceTimer();
+        }
         energyRegen();
        
     }
@@ -110,25 +118,31 @@ public class GameController : MonoBehaviour {
         {
             m_storyScreen.SetActive(true);
             m_characterScreen.SetActive(false);
-            for(int i=0; i<=m_ButtonCounter; i++)
+            /*for(int i=0; i<=m_ButtonCounter; i++)
             {
-                m_buttons[i].SetActive(true);
+                m_Buttons[i].SetActive(true);
             }
-            m_ScrollView.SetActive(true);
+            */
+            //m_ScrollView.SetActive(true);
             m_buttonCharacter.GetComponent<Image>().sprite = m_CharButton;
+            //m_CH.CharacterDestroy();
+            
+            
             
         }
         else
         {
             m_storyScreen.SetActive(false);
             m_characterScreen.SetActive(true);
-            for (int i = 0; i <= m_ButtonCounter; i++)
+            /*for (int i = 0; i <= m_ButtonCounter; i++)
             {
-                m_buttons[i].SetActive(false);
+                m_Buttons[i].SetActive(false);
             }
-
-            m_ScrollView.SetActive(false);
+            */
+            //m_ScrollView.SetActive(false);
             m_buttonCharacter.GetComponent<Image>().sprite = m_StoryButton;
+            m_CH.CharactersActivated();
+            //m_CH.CharacterSpawn();
         }
 
 
@@ -238,12 +252,12 @@ public class GameController : MonoBehaviour {
 
     public void SetButton (IList<Branch> aBranches)
     {
-        for (int i = 0; i < m_buttons.Count; i++)
-            m_buttons[i].SetActive(false);
+        for (int i = 0; i < m_Buttons.Count; i++)
+            m_Buttons[i].SetActive(false);
         for (int i = 0; i < aBranches.Count; i++)
         {
-            m_buttons[i].SetActive(true);
-            m_buttons[i].GetComponent<ButtonController>().UpdateButton(aBranches[i]);
+            m_Buttons[i].SetActive(true);
+            m_Buttons[i].GetComponent<ButtonController>().UpdateButton(aBranches[i]);
             m_ButtonCounter = i;
         }
     }

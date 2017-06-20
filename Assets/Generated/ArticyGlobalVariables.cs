@@ -35,9 +35,10 @@ namespace Articy.ProjectTheseus.GlobalVariables
         static ArticyGlobalVariables()
         {
             variableNames.Add("SVar.m_Gold");
-            variableNames.Add("SVar.c_Jorrah");
-            variableNames.Add("SVar.c_Minotaur");
+            variableNames.Add("SVar.m_Jorrah");
+            variableNames.Add("SVar.m_Minotaur");
             variableNames.Add("SVar.m_Scenario");
+            variableNames.Add("SVar.m_Monk");
             variableNames.Add("SChar.c_Jorrah");
             variableNames.Add("SChar.c_Minotaur");
         }

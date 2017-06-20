@@ -3,7 +3,8 @@
     "set_Localization": "True",
     "set_TextFormatter": "Unity",
     "set_UseScriptSupport": "True",
-    "ObjectDefinitionsHash": "BAF2B1333CF987E8E1F636BF34D45598970CBAB63A8DA1A36D138E24A848F46F"
+    "ExportVersion": "1.1",
+    "ObjectDefinitionsHash": "0874D689F477AC9EA668E9199E2FE24FD8BF00290D6EC0631BBB65DC8418A0E9"
   },
   "Project": {
     "Name": "Project Theseus",
@@ -23,13 +24,13 @@
           "Description": "gold to spend"
         },
         {
-          "Variable": "c_Jorrah",
+          "Variable": "m_Jorrah",
           "Type": "Boolean",
           "Value": "False",
           "Description": "controlls if Jorrah is on screen"
         },
         {
-          "Variable": "c_Minotaur",
+          "Variable": "m_Minotaur",
           "Type": "Boolean",
           "Value": "False",
           "Description": "controlls if Minotaur is on screen"
@@ -39,6 +40,12 @@
           "Type": "String",
           "Value": "camp",
           "Description": "shows the actual scenario"
+        },
+        {
+          "Variable": "m_Monk",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
         }
       ]
     },
@@ -423,7 +430,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -492,7 +499,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -560,7 +567,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -620,7 +627,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -684,7 +691,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -730,7 +737,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -807,7 +814,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -834,13 +841,13 @@
               },
               {
                 "Property": "Species",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Species",
                 "Localizable": true
               },
               {
                 "Property": "BornIn",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Born in",
                 "Localizable": true
               },
@@ -852,25 +859,25 @@
               },
               {
                 "Property": "Occupation",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Profession",
                 "Localizable": true
               },
               {
                 "Property": "Accent",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Voice",
                 "Localizable": true
               },
               {
                 "Property": "Personality",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Personality",
                 "Localizable": true
               },
               {
                 "Property": "Appearance",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Appearance",
                 "Localizable": true
               }
@@ -959,37 +966,37 @@
             "Properties": [
               {
                 "Property": "Motivation",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Goals",
                 "Localizable": true
               },
               {
                 "Property": "InnerConflict",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Inner Conflict",
                 "Localizable": true
               },
               {
                 "Property": "Skills",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Skills",
                 "Localizable": true
               },
               {
                 "Property": "Fears",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Weaknesses",
                 "Localizable": true
               },
               {
                 "Property": "Habits",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Quirks / Habits",
                 "Localizable": true
               },
               {
                 "Property": "FurtherDetails",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Further Details",
                 "Localizable": true
               }
@@ -1056,13 +1063,13 @@
               },
               {
                 "Property": "Species",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Species",
                 "Localizable": true
               },
               {
                 "Property": "BornIn",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Born in",
                 "Localizable": true
               },
@@ -1074,25 +1081,25 @@
               },
               {
                 "Property": "Occupation",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Profession",
                 "Localizable": true
               },
               {
                 "Property": "Accent",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Voice",
                 "Localizable": true
               },
               {
                 "Property": "Personality",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Personality",
                 "Localizable": true
               },
               {
                 "Property": "Appearance",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Appearance",
                 "Localizable": true
               }
@@ -1270,13 +1277,13 @@
               },
               {
                 "Property": "Species",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Species",
                 "Localizable": true
               },
               {
                 "Property": "BornIn",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Born in",
                 "Localizable": true
               },
@@ -1288,25 +1295,25 @@
               },
               {
                 "Property": "Occupation",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Profession",
                 "Localizable": true
               },
               {
                 "Property": "Accent",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Voice",
                 "Localizable": true
               },
               {
                 "Property": "Personality",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Personality",
                 "Localizable": true
               },
               {
                 "Property": "Appearance",
-                "Type": "String",
+                "Type": "string",
                 "DisplayName": "Appearance",
                 "Localizable": true
               }
@@ -1432,7 +1439,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1522,7 +1529,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1621,7 +1628,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1728,7 +1735,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1802,7 +1809,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1864,7 +1871,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1918,7 +1925,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -1982,7 +1989,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -2092,7 +2099,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -2216,7 +2223,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -2266,7 +2273,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -2325,7 +2332,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -2355,7 +2362,7 @@
         },
         {
           "Property": "TechnicalName",
-          "Type": "String"
+          "Type": "string"
         },
         {
           "Property": "Parent",
@@ -2418,7 +2425,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "setProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\",getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\") - 20);\nprint(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));",
+                "Text": "setProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\",getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\") - 20);\nSVar.m_Jorrah = true;\nprint(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));",
                 "Id": "0x100000000000113",
                 "Owner": "0x10000000000010F",
                 "Connections": [
@@ -2482,7 +2489,7 @@
             "Text": "FFr_D7819200.Text",
             "ExternalId": "",
             "Position": {
-              "x": 500.0,
+              "x": 4075.0,
               "y": -50.0
             },
             "ZIndex": 5.0,
@@ -2496,44 +2503,6 @@
                 "Text": "",
                 "Id": "0x100000000000129",
                 "Owner": "0x100000000000126"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x10000000000012A",
-                "Owner": "0x100000000000126",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000000131",
-                    "Target": "0x10000000000012E"
-                  }
-                ]
-              },
-              {
-                "Text": "",
-                "Id": "0x100000000000C93",
-                "Owner": "0x100000000000126",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000000138",
-                    "Target": "0x100000000000135"
-                  }
-                ]
               }
             ]
           }
@@ -2582,7 +2551,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "SVar.m_Minotaur = false;",
                 "Id": "0x100000000000142",
                 "Owner": "0x10000000000013E",
                 "Connections": [
@@ -2657,7 +2626,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "SVar.m_Jorrah = false;",
                 "Id": "0x10000000000014A",
                 "Owner": "0x100000000000146",
                 "Connections": [
@@ -4252,7 +4221,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "print(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));",
+                "Text": "print(getProp( getObj(\"m_Jorrah\"), \"SCProperties.m_HP\"));\n",
                 "Id": "0x10000000000011A",
                 "Owner": "0x100000000000116",
                 "Connections": [
