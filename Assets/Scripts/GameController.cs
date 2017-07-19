@@ -6,6 +6,7 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using System;
 using CharacterH;
+using LifeBarHandler;
 
 public class GameController : MonoBehaviour {
 
@@ -70,6 +71,7 @@ public class GameController : MonoBehaviour {
 
     private int m_ButtonCounter;
     private CharacterHandler m_CH;
+    private HpMpHandler m_LB;
 
    /* 
     * ATENÇAO!!!!!!!!!!!!!!!!!
@@ -87,6 +89,8 @@ public class GameController : MonoBehaviour {
     void Start() {
         m_CH = GetComponent<CharacterHandler>();
         energyTimeSaving();
+        m_LB = GetComponent<HpMpHandler>();
+        //m_LB.testc();
         ScrollToBottom();
     }
 
@@ -247,7 +251,7 @@ public class GameController : MonoBehaviour {
     //scroll to botton after load all choices
     void ScrollToBottom()
     {
-        GameObject.Find("Scroll View").GetComponent<ScrollRect>().verticalNormalizedPosition = 0.5f;
+        m_ScrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0.5f;
     }
 
     public void SetButton (IList<Branch> aBranches)
