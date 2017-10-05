@@ -42,9 +42,15 @@ public class ArticyDebugBranch : MonoBehaviour
 			dialogText.text = obj.MenuText;
 
 			// Empty? Usually it would have a menu text, but it was deliberately left empty, in a normal game this could mean a single branch to just continue the dialog, if the protagonist is talking for
-			// example, how you handle this is up to you, for this demo we just use the text "..." to show, "press to continue with the dialog.
+			// example, how you handle this is up to you, for this we just use the text normal text to show.
 			if (dialogText.text == "")
-				dialogText.text = "...";
+			{
+				var txtObj = obj as IObjectWithText;
+				if(txtObj != null)
+					dialogText.text = txtObj.Text;
+				else
+					dialogText.text = "...";
+			}
 		}
 
 		// if the text is still empty, we can show the displayname of the target

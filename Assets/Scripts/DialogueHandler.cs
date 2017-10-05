@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
-using Articy.ProjectTheseus;
+using Articy.ProjectTheseus; // in case of project name change, change this
+using UnityEngine.UI;
 
 public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
+    private Branch m_lastNodePrinted = null;
     // Use this for initialization
     void Start()
     {
@@ -17,19 +20,34 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
     {
     }
 
+
     public void OnFlowPlayerPaused(IFlowObject aObject)
     {
-        
+
         var objWithText = aObject as IObjectWithText;
         if (objWithText != null)
         {
             Debug.Log(objWithText.Text);// teste para ler o texto no console
-            //Call the story block generator which spawn a story block on screen
-            GetComponent<GameController>().GenerateStoryBlock(0, objWithText.Text);
-            
+                                        //Call the story block generator which spawn a story block on screen
+
+            GameController gc = GetComponent<GameController>();
+            if (gc)
+            {
+                if (gc.StoryNodesList.Count > 0 &&
+                    gc.StoryNodesList[gc.StoryNodesList.Count - 1].GetComponent<Text>() &&
+                    objWithText.Text == gc.StoryNodesList[gc.StoryNodesList.Count - 1].GetComponent<Text>().text)
+
+                {
+                    SceneManager.LoadScene("TheEnd");
+                }
+                else
+                {
+                    gc.GenerateStoryBlock(0, objWithText.Text);
+                    
+                }
+            }
         }
     }
-
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
         // aBranches é a lista de opções que devem ser enviadas para os botões
@@ -39,23 +57,31 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (aBranches.Count > 1)
             GetComponent<GameController>().SetButton(aBranches);
         else
-            if (aBranches.Count > 0)
-            GetComponent<ArticyFlowPlayer>().Play(aBranches[0]);
-
-        foreach (var branch in aBranches)
+            if (aBranches.Count > 0 && aBranches[0] != null && aBranches[0].IsValid)
         {
-            // we only want branches that are valid
-            if (!branch.IsValid) continue;
-                
-            // ... work with our valid branch
+            if (m_lastNodePrinted == null || (m_lastNodePrinted != null && m_lastNodePrinted != aBranches[0]  )  )
+
+            {
+                m_lastNodePrinted = aBranches[0];
+                GetComponent<ArticyFlowPlayer>().Play(aBranches[0]);
+            }
+            else
+            {
+                SceneManager.LoadScene("TheEnd");
+            }
         }
 
         // Os botões precisam ter o Branch armazenados dentro deles.
     }
 
+
     // os botões podem chamar essa função para ir para a opção.
     public void GotToBranch(Branch target)
     {
-        GetComponent<ArticyFlowPlayer>().Play(target);
+        if (m_lastNodePrinted == null || (m_lastNodePrinted != null && m_lastNodePrinted != target)){
+            m_lastNodePrinted = target;
+            GetComponent<ArticyFlowPlayer>().Play(target);
+        }
     }
+
 }

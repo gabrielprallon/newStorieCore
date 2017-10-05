@@ -39,7 +39,7 @@ namespace LifeBarHandler
 
 
         }
-
+        //load the character infos from articy
         void LoadCharacters()
         {
             m_Char = ArticyDatabase.GetObject<p_Character>(m_CharName);
@@ -55,7 +55,7 @@ namespace LifeBarHandler
                 MpBarWid();
             }
         }
-
+        // controls wid of the hp bars based on the percentage of current health
         public void HpBarWid()
         {
             m_HPdif = m_Char.Template.SCProperties.m_HP/m_MaxHP;
@@ -64,6 +64,7 @@ namespace LifeBarHandler
                 m_HPBarMaskRT.sizeDelta = new Vector2(m_MaxWidth * m_HPdif, m_HPBarMaskRT.sizeDelta.y);
             }
         }
+        // controls the wid of the mp bar based on the percentage of current magic power
         public void MpBarWid()
         {
             m_MPdif = m_Char.Template.SCProperties.m_MP / m_MaxMP;

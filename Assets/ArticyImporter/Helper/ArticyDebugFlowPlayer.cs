@@ -106,7 +106,7 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 
 			// here we make sure to get the Branch component from our button, either by referencing an already existing one, or by adding it.
 			var branchBtn = btn.GetComponent<ArticyDebugBranch>();
-			if(branchBtn != null)
+			if(branchBtn == null)
 				branchBtn = btn.AddComponent<ArticyDebugBranch>();
 
 			// this will assign the flowplayer and branch and will create a proper label for the button.

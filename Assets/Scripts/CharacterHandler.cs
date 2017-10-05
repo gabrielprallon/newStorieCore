@@ -31,6 +31,8 @@ namespace CharacterH
             m_CharOnScreen[0] = Articy.ProjectTheseus.GlobalVariables.ArticyGlobalVariables.Default.SVar.m_Jorrah;
             m_CharOnScreen[1] = Articy.ProjectTheseus.GlobalVariables.ArticyGlobalVariables.Default.SVar.m_Minotaur;
         }
+
+        //set the character on when the character screen turns active
         public void CharactersActivated()
         {
             for (int i = 0; i<m_CharOnScreen.Count; i++)
@@ -47,6 +49,7 @@ namespace CharacterH
         }
 
 
+        //Spawn a new character on the screen
         public void CharacterSpawn()
         {
             int x;
@@ -62,6 +65,8 @@ namespace CharacterH
                 //m_CharList[i].SetActive(true);
             }
         }
+
+        //controls how often the player position changes
         public void CharacterPlaceTimer()
         {
             m_LastChangeTime += Time.deltaTime;
@@ -71,6 +76,8 @@ namespace CharacterH
                     CharacterSpawn();
             }
         }
+
+        //turn off the characters when the history screen turns active
         public void CharacterDestroy()
         {
             for(int i = 0; i < m_CharList.Count; i++)

@@ -25,7 +25,8 @@ public class SoundHandler : MonoBehaviour {
 	void Update () {
 		
 	}
-public void AudioOffAndOnAgain()
+    //change the music volume to 0 or 100
+    public void AudioOffAndOnAgain()
     {
 		if(m_SoundOnImage.active)
         {

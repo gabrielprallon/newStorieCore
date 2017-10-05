@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 using System;
@@ -66,23 +67,37 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     private float scrollSpeed = 1000f;
     private bool m_characterScreenOn = false;
-    
-    private List<GameObject> m_StoryNodesList;
+
+    private List<GameObject> storyNodesList;
 
     private int m_ButtonCounter;
     private CharacterHandler m_CH;
     private HpMpHandler m_LB;
 
-   /* 
-    * ATENÇAO!!!!!!!!!!!!!!!!!
-    * O UNITY N CONSEGUE IDENTIFICAR OS LIMITES DAS VARIAVEIS SETADAS PELO ARTICY
-    * CRIAR VERIFICADORES PARA CASO AS VARIAVEIS ULTRAPASSEM O CODIGO SETA ELA PRO VALOR CERTO
-    * EX: O PLAYER N PODE TER MENOS Q 0 DE HP, CASO O HP - DANO CAUSADO DE <0 O HP PRECISA VIRAR 0
-    */
+    public List<GameObject> StoryNodesList
+    {
+        get
+        {
+            return storyNodesList;
+        }
+
+        set
+        {
+            storyNodesList = value;
+        }
+    }
+
+    /* 
+     * ATENÇAO!!!!!!!!!!!!!!!!!
+     * O UNITY N CONSEGUE IDENTIFICAR OS LIMITES DAS VARIAVEIS SETADAS PELO ARTICY
+     * CRIAR VERIFICADORES PARA CASO AS VARIAVEIS ULTRAPASSEM O CODIGO SETA ELA PRO VALOR CERTO
+     * EX: O PLAYER N PODE TER MENOS Q 0 DE HP, CASO O HP - DANO CAUSADO DE <0 O HP PRECISA VIRAR 0
+     */
     void Awake()
     {
         energyLoader();
-        m_StoryNodesList = new List<GameObject>();
+        StoryNodesList = new List<GameObject>();
+
     }
 
     // Use this for initialization
@@ -101,7 +116,7 @@ public class GameController : MonoBehaviour {
             m_CH.CharacterPlaceTimer();
         }
         energyRegen();
-       
+        
     }
 
 
@@ -234,14 +249,16 @@ public class GameController : MonoBehaviour {
     //get button text and create a storyblock
     public void GenerateStoryBlock(int ID, string text)
     {
+
         GameObject m_StoryNode = Instantiate(m_storyBlockPrefab);
         m_StoryNode.GetComponent<StoryBlock>().SetText(text);
         m_StoryNode.GetComponent<RectTransform>().SetParent(ScrollContainer.transform, false);
         m_StoryNode.GetComponent<RectTransform>().localPosition = new Vector3(0, ScrollContainer.sizeDelta.y * (-1), 0);
         ScrollContainer.sizeDelta = new Vector2(ScrollContainer.sizeDelta.x, ScrollContainer.sizeDelta.y + heightIncrementer);
         m_StoryNode.GetComponent<RectTransform>().offsetMax = new Vector2(0, m_StoryNode.GetComponent<RectTransform>().offsetMax.y);
-        m_StoryNodesList.Add(m_StoryNode);
+        StoryNodesList.Add(m_StoryNode);
         automaticScroll();
+        
     }
     //scroll down for each chosen choice
     void automaticScroll()
@@ -253,7 +270,7 @@ public class GameController : MonoBehaviour {
     {
         m_ScrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0.5f;
     }
-
+    //turn on the number of buttons based on the number of choises the player has to make
     public void SetButton (IList<Branch> aBranches)
     {
         for (int i = 0; i < m_Buttons.Count; i++)
@@ -265,10 +282,12 @@ public class GameController : MonoBehaviour {
             m_ButtonCounter = i;
         }
     }
-
+    //load the next story branch
     public void GoToBranch(Branch nextBranch)
     {
+        
         GetComponent<DialogueHandler>().GotToBranch(nextBranch);
+        
     }
     //armazenar uma lista de branch reconstruir os botÕes
 
