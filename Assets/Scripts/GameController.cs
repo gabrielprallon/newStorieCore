@@ -287,6 +287,7 @@ public class GameController : MonoBehaviour {
     {
         
         GetComponent<DialogueHandler>().GotToBranch(nextBranch);
+
         
     }
     //armazenar uma lista de branch reconstruir os botÕes

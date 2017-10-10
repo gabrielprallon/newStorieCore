@@ -59,28 +59,35 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
         else
             if (aBranches.Count > 0 && aBranches[0] != null && aBranches[0].IsValid)
         {
-            if (m_lastNodePrinted == null || (m_lastNodePrinted != null && m_lastNodePrinted != aBranches[0]  )  )
-
+            if (aBranches[0].Target != GetComponent<ArticyFlowPlayer>().PausedOn)
             {
                 m_lastNodePrinted = aBranches[0];
                 GetComponent<ArticyFlowPlayer>().Play(aBranches[0]);
+                Debug.Log("last node");
+                Debug.Log(m_lastNodePrinted);
+                Debug.Log(aBranches[0]);
+                if (m_lastNodePrinted == null)
+                {
+                    Debug.Log("continua nulo");
+                }
+
             }
+            //if (m_lastNodePrinted != aBranches[0])
             else
             {
                 SceneManager.LoadScene("TheEnd");
             }
         }
-
-        // Os botões precisam ter o Branch armazenados dentro deles.
     }
 
 
     // os botões podem chamar essa função para ir para a opção.
     public void GotToBranch(Branch target)
     {
-        if (m_lastNodePrinted == null || (m_lastNodePrinted != null && m_lastNodePrinted != target)){
+        if ((m_lastNodePrinted == null || (m_lastNodePrinted != null && m_lastNodePrinted != target)) && GetComponent<ArticyFlowPlayer>().AvailableBranches.Count >= 0){
             m_lastNodePrinted = target;
             GetComponent<ArticyFlowPlayer>().Play(target);
+            Debug.Log(m_lastNodePrinted);
         }
     }
 
