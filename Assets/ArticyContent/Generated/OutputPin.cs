@@ -74,7 +74,7 @@ namespace Articy.ProjectTheseus
             return Connections.Cast<IOutgoingConnection>().ToList();
         }
         
-        public void Evaluate(Articy.Unity.IBaseScriptMethodProvider aMethodProvider, Articy.Unity.Interfaces.IGlobalVariables aGlobalVariables)
+        public void Evaluate([System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.IBaseScriptMethodProvider aMethodProvider, [System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.Interfaces.IGlobalVariables aGlobalVariables)
         {
             Text.CallScript(aMethodProvider, aGlobalVariables);
         }
@@ -87,12 +87,13 @@ namespace Articy.ProjectTheseus
                 newClone.Text = ((ArticyScriptInstruction)(Text.CloneObject()));
             }
             newClone.Owner = Owner;
-            newClone.Connections = new List<OutgoingConnection>();
+            List<OutgoingConnection> temp_Connections = new List<OutgoingConnection>();
             int i = 0;
             for (i = 0; (i < Connections.Count); i = (i + 1))
             {
-                newClone.Connections.Add(((OutgoingConnection)(Connections[i].CloneObject())));
+                temp_Connections.Add(((OutgoingConnection)(Connections[i].CloneObject())));
             }
+            newClone.Connections = temp_Connections;
             newClone.Id = Id;
         }
         

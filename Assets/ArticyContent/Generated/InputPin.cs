@@ -21,7 +21,7 @@ namespace Articy.ProjectTheseus
     
     
     [Serializable()]
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636360157997062272)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636440148133815352)]
     public class InputPin : ArticyPrimitive, IInputPin
     {
         
@@ -75,7 +75,7 @@ namespace Articy.ProjectTheseus
             return Connections.Cast<IOutgoingConnection>().ToList();
         }
         
-        public bool Evaluate(Articy.Unity.IBaseScriptMethodProvider aMethodProvider, Articy.Unity.Interfaces.IGlobalVariables aGlobalVariables)
+        public bool Evaluate([System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.IBaseScriptMethodProvider aMethodProvider, [System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.Interfaces.IGlobalVariables aGlobalVariables)
         {
             return Text.CallScript(aMethodProvider, aGlobalVariables);
         }
@@ -88,12 +88,13 @@ namespace Articy.ProjectTheseus
                 newClone.Text = ((ArticyScriptCondition)(Text.CloneObject()));
             }
             newClone.Owner = Owner;
-            newClone.Connections = new List<OutgoingConnection>();
+            List<OutgoingConnection> temp_Connections = new List<OutgoingConnection>();
             int i = 0;
             for (i = 0; (i < Connections.Count); i = (i + 1))
             {
-                newClone.Connections.Add(((OutgoingConnection)(Connections[i].CloneObject())));
+                temp_Connections.Add(((OutgoingConnection)(Connections[i].CloneObject())));
             }
+            newClone.Connections = temp_Connections;
             newClone.Id = Id;
         }
         

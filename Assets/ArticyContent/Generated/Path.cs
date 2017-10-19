@@ -388,12 +388,13 @@ namespace Articy.ProjectTheseus
             newClone.mLocaKey_DisplayName = mLocaKey_DisplayName;
             newClone.mOverwritten_DisplayName = mOverwritten_DisplayName;
             newClone.PreviewImage = PreviewImage;
-            newClone.Vertices = new List<Vector2>();
+            List<Vector2> temp_Vertices = new List<Vector2>();
             int i = 0;
             for (i = 0; (i < Vertices.Count); i = (i + 1))
             {
-                newClone.Vertices.Add(Vertices[i]);
+                temp_Vertices.Add(Vertices[i]);
             }
+            newClone.Vertices = temp_Vertices;
             newClone.Transform = Transform;
             newClone.Color = Color;
             newClone.mLocaKey_Text = mLocaKey_Text;

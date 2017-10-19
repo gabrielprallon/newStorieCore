@@ -205,12 +205,7 @@ namespace Articy.ProjectTheseus
         protected override void CloneProperties(object aClone)
         {
             Entity newClone = ((Entity)(aClone));
-            newClone.Attachments = new List<ArticyObject>();
-            int i = 0;
-            for (i = 0; (i < Attachments.Count); i = (i + 1))
-            {
-                newClone.Attachments.Add(((ArticyObject)(Attachments[i].CloneObject())));
-            }
+            mAttachments.CustomClone(newClone.mAttachments);
             newClone.mLocaKey_DisplayName = mLocaKey_DisplayName;
             newClone.mOverwritten_DisplayName = mOverwritten_DisplayName;
             newClone.Color = Color;

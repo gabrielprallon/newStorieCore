@@ -228,7 +228,7 @@ namespace Articy.ProjectTheseus
             return OutputPins.Cast<IOutputPin>().ToList();
         }
         
-        public bool Evaluate(Articy.Unity.IBaseScriptMethodProvider aMethodProvider, [System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.Interfaces.IGlobalVariables aGlobalVariables)
+        public bool Evaluate([System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.IBaseScriptMethodProvider aMethodProvider, [System.Runtime.InteropServices.OptionalAttribute()] Articy.Unity.Interfaces.IGlobalVariables aGlobalVariables)
         {
             return Expression.CallScript(aMethodProvider, aGlobalVariables);
         }
@@ -250,17 +250,19 @@ namespace Articy.ProjectTheseus
                 newClone.Expression = ((ArticyScriptCondition)(Expression.CloneObject()));
             }
             newClone.Color = Color;
-            newClone.InputPins = new List<InputPin>();
+            List<InputPin> temp_InputPins = new List<InputPin>();
             int i = 0;
             for (i = 0; (i < InputPins.Count); i = (i + 1))
             {
-                newClone.InputPins.Add(((InputPin)(InputPins[i].CloneObject())));
+                temp_InputPins.Add(((InputPin)(InputPins[i].CloneObject())));
             }
-            newClone.OutputPins = new List<OutputPin>();
+            newClone.InputPins = temp_InputPins;
+            List<OutputPin> temp_OutputPins = new List<OutputPin>();
             for (i = 0; (i < OutputPins.Count); i = (i + 1))
             {
-                newClone.OutputPins.Add(((OutputPin)(OutputPins[i].CloneObject())));
+                temp_OutputPins.Add(((OutputPin)(OutputPins[i].CloneObject())));
             }
+            newClone.OutputPins = temp_OutputPins;
             base.CloneProperties(newClone);
         }
         

@@ -246,12 +246,7 @@ namespace Articy.ProjectTheseus
         protected override void CloneProperties(object aClone)
         {
             Dialogue newClone = ((Dialogue)(aClone));
-            newClone.Attachments = new List<ArticyObject>();
-            int i = 0;
-            for (i = 0; (i < Attachments.Count); i = (i + 1))
-            {
-                newClone.Attachments.Add(((ArticyObject)(Attachments[i].CloneObject())));
-            }
+            mAttachments.CustomClone(newClone.mAttachments);
             newClone.mLocaKey_DisplayName = mLocaKey_DisplayName;
             newClone.mOverwritten_DisplayName = mOverwritten_DisplayName;
             newClone.PreviewImage = PreviewImage;
@@ -263,16 +258,19 @@ namespace Articy.ProjectTheseus
             newClone.ZIndex = ZIndex;
             newClone.Size = Size;
             newClone.ShortId = ShortId;
-            newClone.InputPins = new List<InputPin>();
+            List<InputPin> temp_InputPins = new List<InputPin>();
+            int i = 0;
             for (i = 0; (i < InputPins.Count); i = (i + 1))
             {
-                newClone.InputPins.Add(((InputPin)(InputPins[i].CloneObject())));
+                temp_InputPins.Add(((InputPin)(InputPins[i].CloneObject())));
             }
-            newClone.OutputPins = new List<OutputPin>();
+            newClone.InputPins = temp_InputPins;
+            List<OutputPin> temp_OutputPins = new List<OutputPin>();
             for (i = 0; (i < OutputPins.Count); i = (i + 1))
             {
-                newClone.OutputPins.Add(((OutputPin)(OutputPins[i].CloneObject())));
+                temp_OutputPins.Add(((OutputPin)(OutputPins[i].CloneObject())));
             }
+            newClone.OutputPins = temp_OutputPins;
             base.CloneProperties(newClone);
         }
         

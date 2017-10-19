@@ -207,12 +207,7 @@ namespace Articy.ProjectTheseus
             TextObject newClone = ((TextObject)(aClone));
             newClone.mLocaKey_DisplayName = mLocaKey_DisplayName;
             newClone.mOverwritten_DisplayName = mOverwritten_DisplayName;
-            newClone.Attachments = new List<ArticyObject>();
-            int i = 0;
-            for (i = 0; (i < Attachments.Count); i = (i + 1))
-            {
-                newClone.Attachments.Add(((ArticyObject)(Attachments[i].CloneObject())));
-            }
+            mAttachments.CustomClone(newClone.mAttachments);
             newClone.PreviewImage = PreviewImage;
             newClone.Color = Color;
             newClone.mLocaKey_Text = mLocaKey_Text;

@@ -448,17 +448,19 @@ namespace Articy.ProjectTheseus
             newClone.mLocaKey_DisplayName = mLocaKey_DisplayName;
             newClone.mOverwritten_DisplayName = mOverwritten_DisplayName;
             newClone.PreviewImage = PreviewImage;
-            newClone.Anchors = new List<LocationAnchor>();
+            List<LocationAnchor> temp_Anchors = new List<LocationAnchor>();
             int i = 0;
             for (i = 0; (i < Anchors.Count); i = (i + 1))
             {
-                newClone.Anchors.Add(((LocationAnchor)(Anchors[i].CloneObject())));
+                temp_Anchors.Add(((LocationAnchor)(Anchors[i].CloneObject())));
             }
-            newClone.Vertices = new List<Vector2>();
+            newClone.Anchors = temp_Anchors;
+            List<Vector2> temp_Vertices = new List<Vector2>();
             for (i = 0; (i < Vertices.Count); i = (i + 1))
             {
-                newClone.Vertices.Add(Vertices[i]);
+                temp_Vertices.Add(Vertices[i]);
             }
+            newClone.Vertices = temp_Vertices;
             newClone.Transform = Transform;
             newClone.ShapeType = ShapeType;
             newClone.Color = Color;
