@@ -300,7 +300,7 @@
     <Compile Include="Assets\Easy Save 2\Examples\Shared Assets\Scripts\MyExampleScript.cs" />
     <Compile Include="Assets\Easy Save 2\Examples\Upload and Download a Texture\UploadDownloadTexture.cs" />
     <Compile Include="Assets\Easy Save 2\Types\ES2_AudioClip.cs" />
-    <Compile Include="Assets\RandomMinotaurBehavior.cs" />
+    <Compile Include="Assets\Scripts\AnimationRandomizer.cs" />
     <Compile Include="Assets\Scripts\BackToIntroScreen.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
     <Compile Include="Assets\Scripts\CharacterHandler.cs" />
