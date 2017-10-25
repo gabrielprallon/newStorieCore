@@ -23,8 +23,14 @@ public class AnimationRandomizer : StateMachineBehaviour {
 
             if (i > 0.75f)
             {
-                animator.SetInteger(m_parameterName, 1);
-
+                if (m_stateIDAArray.Length > 2)
+                {
+                    animator.SetInteger(m_parameterName, Random.Range(1, m_stateIDAArray.Length));
+                }
+                else
+                {
+                    animator.SetInteger(m_parameterName, 1);
+                }
             }
             else
             {
