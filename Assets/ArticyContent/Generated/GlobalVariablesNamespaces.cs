@@ -18,15 +18,14 @@ namespace Articy.ProjectTheseus.GlobalVariables
 {
     
     
-    // variables for Project theseus
     [Serializable()]
-    public class SVar : IArticyNamespace
+    public class m_ArticyGlobalVariables : IArticyNamespace
     {
         
         [SerializeField()]
         private BaseGlobalVariables _VariableStorage;
         
-        // gold to spend
+        // Virtual Currency
         public int m_Gold
         {
             get
@@ -39,112 +38,38 @@ namespace Articy.ProjectTheseus.GlobalVariables
             }
         }
         
-        // controlls if Jorrah is on screen
-        public bool m_Jorrah
+        // Scenario Holder
+        public int m_Scenario
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(0);
+                return _VariableStorage.Internal_GetVariableValueInt32(1);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(0, value);
+                _VariableStorage.Internal_SetVariableValueInt32(1, value);
             }
         }
         
-        // controlls if Minotaur is on screen
-        public bool m_Minotaur
+        // shows how many char ID we Have
+        public int m_CharacterCounter
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(1);
+                return _VariableStorage.Internal_GetVariableValueInt32(2);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(1, value);
-            }
-        }
-        
-        // shows the actual scenario
-        public string m_Scenario
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueString(0);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueString(0, value);
-            }
-        }
-        
-        // 
-        public bool m_Monk
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(2);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
+                _VariableStorage.Internal_SetVariableValueInt32(2, value);
             }
         }
         
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
-            aStorage.RegisterVariable("SVar.m_Gold", 0);
-            aStorage.RegisterVariable("SVar.m_Jorrah", false);
-            aStorage.RegisterVariable("SVar.m_Minotaur", false);
-            aStorage.RegisterVariable("SVar.m_Scenario", "camp");
-            aStorage.RegisterVariable("SVar.m_Monk", false);
-        }
-    }
-}
-namespace Articy.ProjectTheseus.GlobalVariables
-{
-    
-    
-    // controlls all chars on screen
-    [Serializable()]
-    public class SChar : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // 
-        public bool c_Jorrah
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(3);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
-            }
-        }
-        
-        // 
-        public bool c_Minotaur
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(4);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(4, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("SChar.c_Jorrah", false);
-            aStorage.RegisterVariable("SChar.c_Minotaur", false);
+            aStorage.RegisterVariable("m_ArticyGlobalVariables.m_Gold", 0);
+            aStorage.RegisterVariable("m_ArticyGlobalVariables.m_Scenario", 0);
+            aStorage.RegisterVariable("m_ArticyGlobalVariables.m_CharacterCounter", 0);
         }
     }
 }

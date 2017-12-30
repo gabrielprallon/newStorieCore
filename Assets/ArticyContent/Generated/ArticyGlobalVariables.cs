@@ -25,38 +25,22 @@ namespace Articy.ProjectTheseus.GlobalVariables
         
         [SerializeField()]
         [HideInInspector()]
-        private SVar mSVar = new SVar();
-        
-        [SerializeField()]
-        [HideInInspector()]
-        private SChar mSChar = new SChar();
+        private m_ArticyGlobalVariables mM_ArticyGlobalVariables = new m_ArticyGlobalVariables();
         
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
-            variableNames.Add("SVar.m_Gold");
-            variableNames.Add("SVar.m_Jorrah");
-            variableNames.Add("SVar.m_Minotaur");
-            variableNames.Add("SVar.m_Scenario");
-            variableNames.Add("SVar.m_Monk");
-            variableNames.Add("SChar.c_Jorrah");
-            variableNames.Add("SChar.c_Minotaur");
+            variableNames.Add("m_ArticyGlobalVariables.m_Gold");
+            variableNames.Add("m_ArticyGlobalVariables.m_Scenario");
+            variableNames.Add("m_ArticyGlobalVariables.m_CharacterCounter");
         }
         #endregion
         
-        public SVar SVar
+        public m_ArticyGlobalVariables m_ArticyGlobalVariables
         {
             get
             {
-                return mSVar;
-            }
-        }
-        
-        public SChar SChar
-        {
-            get
-            {
-                return mSChar;
+                return mM_ArticyGlobalVariables;
             }
         }
         
@@ -70,8 +54,7 @@ namespace Articy.ProjectTheseus.GlobalVariables
         
         public override void Init()
         {
-            SVar.RegisterVariables(this);
-            SChar.RegisterVariables(this);
+            m_ArticyGlobalVariables.RegisterVariables(this);
         }
     }
 }

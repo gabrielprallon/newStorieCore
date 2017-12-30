@@ -245,7 +245,7 @@ namespace Articy.ProjectTheseus
     
     
     [Serializable()]
-    public class ArticyValuep_CharacterTemplate : ArticyValue<Articy.ProjectTheseus.Templates.p_CharacterTemplate>
+    public class ArticyValuem_CharacterProfileTemplate : ArticyValue<Articy.ProjectTheseus.Templates.m_CharacterProfileTemplate>
     {
     }
 }
@@ -254,7 +254,7 @@ namespace Articy.ProjectTheseus
     
     
     [Serializable()]
-    public class ArticyValueSCPropertiesFeature : ArticyValue<Articy.ProjectTheseus.Features.SCPropertiesFeature>
+    public class ArticyValuem_CharacterTemplateFeature : ArticyValue<Articy.ProjectTheseus.Features.m_CharacterTemplateFeature>
     {
     }
 }
@@ -263,7 +263,7 @@ namespace Articy.ProjectTheseus
     
     
     [Serializable()]
-    public class ArticyValuep_Character : ArticyValue<p_Character>
+    public class ArticyValuem_CharacterProfile : ArticyValue<m_CharacterProfile>
     {
     }
 }

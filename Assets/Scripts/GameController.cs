@@ -68,13 +68,13 @@ public class GameController : MonoBehaviour {
     private float scrollSpeed = 1000f;
     private bool m_characterScreenOn = false;
 
-    private List<GameObject> storyNodesList;
+    private List<StoryBlock> storyNodesList;
 
     private int m_ButtonCounter;
     private CharacterHandler m_CH;
     private HpMpHandler m_LB;
 
-    public List<GameObject> StoryNodesList
+    public List<StoryBlock> StoryNodesList
     {
         get
         {
@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour {
     void Awake()
     {
         energyLoader();
-        StoryNodesList = new List<GameObject>();
+        StoryNodesList = new List<StoryBlock>();
 
     }
 
@@ -256,7 +256,7 @@ public class GameController : MonoBehaviour {
         m_StoryNode.GetComponent<RectTransform>().localPosition = new Vector3(0, ScrollContainer.sizeDelta.y * (-1), 0);
         ScrollContainer.sizeDelta = new Vector2(ScrollContainer.sizeDelta.x, ScrollContainer.sizeDelta.y + heightIncrementer);
         m_StoryNode.GetComponent<RectTransform>().offsetMax = new Vector2(0, m_StoryNode.GetComponent<RectTransform>().offsetMax.y);
-        StoryNodesList.Add(m_StoryNode);
+        StoryNodesList.Add(m_StoryNode.GetComponent<StoryBlock>());
         automaticScroll();
         
     }

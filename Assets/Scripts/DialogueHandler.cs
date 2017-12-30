@@ -34,8 +34,8 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
             if (gc)
             {
                 if (gc.StoryNodesList.Count > 0 &&
-                    gc.StoryNodesList[gc.StoryNodesList.Count - 1].GetComponent<Text>() &&
-                    objWithText.Text == gc.StoryNodesList[gc.StoryNodesList.Count - 1].GetComponent<Text>().text)
+                    gc.StoryNodesList[gc.StoryNodesList.Count - 1].TextField &&
+                    objWithText.Text == gc.StoryNodesList[gc.StoryNodesList.Count - 1].TextField.text)
 
                 {
                     SceneManager.LoadScene("TheEnd");
@@ -57,22 +57,28 @@ public class DialogueHandler : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (aBranches.Count > 1)
             GetComponent<GameController>().SetButton(aBranches);
         else
-            if (aBranches.Count > 0 && aBranches[0] != null && aBranches[0].IsValid)
         {
-            if (aBranches[0].Target != GetComponent<ArticyFlowPlayer>().PausedOn)
+            if (aBranches.Count > 0 && aBranches[0] != null && aBranches[0].IsValid)
             {
-                m_lastNodePrinted = aBranches[0];
-                GetComponent<ArticyFlowPlayer>().Play(aBranches[0]);
-                Debug.Log("last node");
-                Debug.Log(m_lastNodePrinted);
-                Debug.Log(aBranches[0]);
-                if (m_lastNodePrinted == null)
+                if (aBranches[0].Target != GetComponent<ArticyFlowPlayer>().PausedOn)
                 {
-                    Debug.Log("continua nulo");
-                }
+                    m_lastNodePrinted = aBranches[0];
+                    GetComponent<ArticyFlowPlayer>().Play(aBranches[0]);
+                    Debug.Log("last node");
+                    Debug.Log(m_lastNodePrinted);
+                    Debug.Log(aBranches[0]);
+                    if (m_lastNodePrinted == null)
+                    {
+                        Debug.Log("continua nulo");
+                    }
 
+                }
+                //if (m_lastNodePrinted != aBranches[0])
+                else
+                {
+                    SceneManager.LoadScene("TheEnd");
+                }
             }
-            //if (m_lastNodePrinted != aBranches[0])
             else
             {
                 SceneManager.LoadScene("TheEnd");

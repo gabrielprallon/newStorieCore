@@ -16,7 +16,7 @@ namespace LifeBarHandler
         [SerializeField]
         private GameObject m_MPBarMask;
         private RectTransform m_MPBarMaskRT;
-        private p_Character m_Char;
+        private Entity m_Char;
         [SerializeField]
         private float m_MaxHP = 100f;
         [SerializeField]
@@ -35,14 +35,15 @@ namespace LifeBarHandler
             m_HPBarMaskRT = m_HPBarMask.GetComponent<RectTransform>();
             m_MPBarMaskRT = m_MPBarMask.GetComponent<RectTransform>();
             m_MaxWidth = m_HPBarMaskRT.sizeDelta.x;
-            //m_Jorah.getProp("m_HP");
+            //a_Jorrah.getProp("m_HP");
+            //m_CharName.;
 
 
         }
         //load the character infos from articy
         void LoadCharacters()
         {
-            m_Char = ArticyDatabase.GetObject<p_Character>(m_CharName);
+            m_Char = ArticyDatabase.GetObject<Entity>(m_CharName);
             m_CharLoaded = true;
         }
 
@@ -58,7 +59,8 @@ namespace LifeBarHandler
         // controls wid of the hp bars based on the percentage of current health
         public void HpBarWid()
         {
-            m_HPdif = m_Char.Template.SCProperties.m_HP/m_MaxHP;
+            m_HPdif = m_Char.getProp("m_CharacterTemplate.m_CharHP") / m_Char.getProp("m_CharacterTemplate.m_CharMaxHP");
+                //.SCProperties.m_HP/m_MaxHP;
             if (m_HPdif != 0)
             {
                 m_HPBarMaskRT.sizeDelta = new Vector2(m_MaxWidth * m_HPdif, m_HPBarMaskRT.sizeDelta.y);
@@ -67,7 +69,8 @@ namespace LifeBarHandler
         // controls the wid of the mp bar based on the percentage of current magic power
         public void MpBarWid()
         {
-            m_MPdif = m_Char.Template.SCProperties.m_MP / m_MaxMP;
+            m_MPdif = m_Char.getProp("m_CharacterTemplate.m_CharMP") / m_Char.getProp("m_CharacterTemplate.m_CharMaxMP");
+            //m_MPdif = m_Char.Template.SCProperties.m_MP / m_MaxMP;
             if (m_MPdif != 0)
             {
                 m_MPBarMaskRT.sizeDelta = new Vector2(m_MaxWidth * m_MPdif, m_MPBarMaskRT.sizeDelta.y);

@@ -10,8 +10,21 @@ public class StoryBlock : MonoBehaviour {
     [SerializeField]
     private Image m_SpriteField;
 
-	// Use this for initialization
-	void Start () {
+    public Text TextField
+    {
+        get
+        {
+            return m_TextField;
+        }
+
+        set
+        {
+            m_TextField = value;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -22,9 +35,9 @@ public class StoryBlock : MonoBehaviour {
     //add text to the block
     public bool SetText(string text)
     {
-        if (m_TextField == null) return false;
-        m_TextField.gameObject.SetActive(true);
-        m_TextField.text = text;
+        if (TextField == null) return false;
+        TextField.gameObject.SetActive(true);
+        TextField.text = text;
         return true;
     }
     //add a image to the block
@@ -40,7 +53,7 @@ public class StoryBlock : MonoBehaviour {
     public void Hide()
     {
         m_SpriteField.gameObject.SetActive(false);
-        m_TextField.gameObject.SetActive(false);
+        TextField.gameObject.SetActive(false);
 
     }
 }

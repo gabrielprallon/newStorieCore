@@ -18,6 +18,6 @@ public class GoldUI : MonoBehaviour {
 	// Update is called once per frame
     //load the gold value from articy
 	void Update () {
-        m_Text.text = Articy.ProjectTheseus.GlobalVariables.ArticyGlobalVariables.Default.SVar.m_Gold.ToString();
+       m_Text.text = Articy.ProjectTheseus.GlobalVariables.ArticyGlobalVariables.Default.m_ArticyGlobalVariables.m_Gold.ToString();
     }
 }
